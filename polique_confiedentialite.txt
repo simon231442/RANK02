@@ -1,0 +1,246 @@
+
+
+A 42, la confidentialité de vos informations est l’une de nos préoccupations majeures!
+
+C’est pourquoi nous souhaitons vous expliquer en toute transparence et simplicité comment nous recueillons, collectons, utilisons, partageons vos informations mais également comment vous pouvez exercer vos droits à tout moment.
+
+Notre Politique de Confidentialité s’applique aux informations que nous recueillons lorsque vous naviguez ou vous vous connectez aux outils pédagogiques développés par 42, notamment mais sans que cette liste soit limitative, sur le site Admissions de votre Campus de rattachement (par exemple le site Admissions de 42 Paris) et l’Intranet.
+
+Notre Politique de Confidentialité ne s'applique pas aux applications ou logiciels tiers tel que : - Stackoverflow : pour en savoir plus, vous pouvez consulter leur privacy policy. - Slack : pour en savoir plus, vous pouvez consulter leur privacy policy
+
+Nous vous invitons à prendre quelques minutes pour lire ce document dans son intégralité afin d’avoir une vision claire sur les traitements de vos données personnelles effectués : - par l’Association 42, Association déclarée à la Préfecture de Police sous le numéro W751218379, dont le siège social est situé 96, boulevard Bessières, 75017 – Paris (France) et/ou - par le Campus où vous candidatez et effectuez votre scolarité.
+
+Si vous souhaitez simplement bénéficier d’une vue d’ensemble sur les différents traitements de données personnelles mis en œuvre par l’Association 42 et/ou votre Campus de rattachement et leurs principales caractéristiques, nous avons mis à votre disposition ci-dessous un tableau contenant la liste des traitements de données personnelles réalisés.
+
+Votre Campus peut être amené à réaliser des traitements de données supplémentaires, propres à ce dernier, en sus des traitements définis dans cette Politique. Pour en savoir plus sur la manière dont votre Campus gère vos données personnelles, nous vous invitons à consulter la politique de confidentialité de votre Campus.
+
+Pour toute question ou commentaire relatif à notre Politique de Confidentialité, vous avez la possibilité d’adresser un courriel à l’adresse suivante : dpo@42.fr ou contactez votre Campus de rattachement.
+
+    *Traitements de données réalisés lorsque l’Association 42 et votre Campus de rattachement agissent en tant que responsables de traitement conjoints *:
+
+Catégorie 	Finalités 	Durées de conservation
+Conformité 	Gestion des droits des personnes concernées 	Demande de portabilité : conservation de la demande jusqu'à la suppression du compte étudiant / Demande d'effacement : pas de conservation / Demande hors Intranet : conservation de la demande pendant 1 an
+Gestion du réseau informatique / technique 	Gestion des logs de connexion pour le suivi et l’analyse des évènements techniques 	1 an
+Gestion du réseau informatique / technique 	Gestion du serveur d’alias email du Campus 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Gestion du réseau informatique / technique 	Gestion de l'authentification aux plateformes 42 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Gestion du réseau informatique / technique 	Mise à disposition d’un LDAP pour les Campus 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Suivi du parcours pédagogique 	Gestion des candidatures et inscriptions à 42 	En cas d'échec aux tests d’entrée (piscine), les données du candidat sont supprimées au bout de 2 semaines. Si connexion à la plateforme sans finaliser les tests, suppression des données en cas d'inactivité du candidat pendant 3 ans sur la plateforme.
+Suivi du parcours pédagogique 	Gestion du parcours pédagogique des étudiants du Campus 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Suivi du parcours pédagogique 	Gestion des projets réalisés pas les étudiants/candidats 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Suivi du parcours pédagogique 	Gestion des examens des étudiants/candidats 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Suivi du parcours pédagogique 	Gestion des sanctions des étudiants/candidats 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Suivi du parcours pédagogique 	Gestion de la localisation des étudiants/candidats d'un cluster 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Suivi du parcours pédagogique 	Réservation de places dans un cluster 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Suivi du parcours pédagogique 	Suivi des temps de présence des étudiants du Campus afin de répondre aux demandes des partenaires sociaux et d’assurer le suivi des étudiants dans la progression de leur cursus 	5 ans à compter de la date de rentrée de chaque cohorte
+Suivi du parcours pédagogique 	Gestion des outils externes mis à disposition des étudiants 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Suivi du parcours pédagogique 	Gestion des votes réalisés par les étudiants 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Suivi du parcours pédagogique 	Suivi des étudiants des cohortes des Campus sur la base de données pédagogiques en vue de piloter le Campus 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Gestion des stages et de la professionnalisation 	Création et publication des CV des étudiants 	3 ans à compter de la dernière activité sur l'Intranet ou en cas d'opposition de l'étudiant à la publication de son CV en ligne
+Gestion des stages et de la professionnalisation 	Gestion des publications d'offres de stages ou d'emplois 	Conservation jusqu'à expiration de l'offre, augmentée d'un mois
+Gestion des alumni 	Gestion de la communauté Alumni 	Conservation des données jusqu'à suppression du compte sur la plateforme Alumnforce sur demande de l'Alumni
+Gestion des alumni 	Réalisation d'enquêtes emploi des Alumni à des fins statistiques 	Jusqu'à demande de suppression de l'Alumni dans l'intranet
+Data analyse 	Réalisation de statistiques ponctuelles 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Data analyse 	Réalisation de rapports en temps réel 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Data analyse 	Réalisation de sondages auprès des étudiants et des anciens étudiants 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+
+    Traitements de données réalisés uniquement par l’Association 42 en tant que responsable de traitement autonome :
+
+Catégorie 	Finalités 	Durées de conservation
+Conformité 	Gestion des droits des personnes concernées 	Demande de portabilité : conservation de la demande jusqu'à la suppression du compte étudiant / Demande d'effacement : pas de conservation / Demande hors Intranet : conservation de la demande pendant 1 an
+Gestion du réseau informatique / technique 	Gestion du helpdesk 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Gestion du réseau informatique / technique 	Gestion de la sauvegarde des données 	1 an
+Gestion du réseau informatique / technique 	Gestion de l’API 	3 ans à compter de la dernière activité sur l'Intranet sauf si demande préalable de suppression du compte
+Gestion du réseau informatique / technique 	Sécurisation des sites internet de l’Association 42 	13 mois pour le dépôt des cookies / 25 mois pour les données issues des cookies
+Suivi du parcours pédagogique 	Analyse de la mesure d’audience des plateformes pédagogiques de 42 	13 mois pour le dépôt des cookies / 25 mois pour les données issues des cookies
+Suivi du parcours pédagogique 	Suivi du nombre d’étudiants actifs au sein des Campus 	10 ans
+Suivi du parcours pédagogique 	Gestion des attributions des titres RNCP 	Refus du titre RNCP : 3 ans à compter du refus / En cas de contestation de la décision : conservation des éléments du dossier du candidat le temps de la procédure / Validation du titre RNCP : conservation identique à la durée du School Record
+Suivi du parcours pédagogique 	Génération des School Records 	Archivage pendant 50 ans à compter du départ de l'étudiant
+Amélioration des services 42 	Réalisations d'études qualitatives et/ou quantitatives 	Coordonnées du testeur : 1 an à compter de l'inscription / Tests réalisés : 6 mois à compter du test puis anonymisation
+Forty 2 	Gestion des séjours au Fort des Saumonards 	Données relatives à la réservation : le temps du séjour / Données de paiement : 10 ans à des fins comptables
+Gestion des évènements et communication 	Organisation d’évènements ou concours au niveau du réseau 42 	3 ans à compter de la dernière activité sur l'Intranet, sauf exercice du droit d'opposition
+Gestion des évènements et communication 	Gestion des communications auprès des candidats et étudiants au niveau du réseau 42 	3 ans à compter de la dernière activité sur l'Intranet, sauf exercice du droit d'opposition
+Gestion des évènements et communication 	Utilisation de l'image des étudiants dans le cadre de communications liées au réseau 42 	Durée de l'autorisation de droit à l'image, augmentée de cinq ans
+Gestion des évènements et communication 	Community management des réseaux sociaux du réseau 42 	Les données sont conservées le temps de l’existence du compte du réseau social concerné, sauf exercice demande de suppression
+Gestion des évènements et communication 	Dispositifs d’alertes et signalements des comportements au sein du réseau 42 	Les données d’identification de l’auteur d’un signalement et des personnes visées sont supprimées dans un délai maximal de 2 mois à compter de la clôture des opérations de vérification si aucune suite n’a été donnée au signalement. / Lorsqu’une procédure disciplinaire ou des poursuites judiciaires sont engagées à l’encontre de la personne mise en cause ou de l’auteur d’une alerte abusive, les données relatives à l’alerte sont conservées jusqu’au terme de la procédure.
+Sommaire
+
+    Qui sont les responsables du traitement de mes données personnelles ?
+    Quelles données personnelles sont traitées par l’Association 42 et mon Campus de rattachement et quand sont-elles collectées ?
+    Pour quelles raisons l’Association 42 et mon Campus de rattachement traitent-ils mes données personnelles ?
+    Quels sont les fondements légaux des traitements de mes données personnelles ?
+    Suis-je obligé de renseigner mes données personnelles ?
+    Comment gérer mes préférences en matière de cookies ?
+    Suis-je susceptible de faire l’objet d’une prise de décision automatisée?
+    Combien de temps seront conservées mes données personnelles ?
+    Mes données personnelles sont-elles en sécurité ?
+    Où sont stockées mes données personnelles ?
+    Qui sont les destinataires de mes données ? Avec qui l’Association 42 partage-t-elle mes données personnelles ?
+    Quels sont mes droits vis-à-vis de mes données personnelles ?
+    Evolution de la présente Politique de confidentialité
+
+1. Qui sont les responsables du traitement de mes données personnelles ?
+
+Le responsable de traitement est l’entité qui détermine les finalités (le “pourquoi ?”) et les moyens (le “comment ?”) des traitements de vos données personnelles.
+
+Dans le cadre de votre scolarité, votre Campus de rattachement et l’Association 42, Association à but non lucratif régie par la loi du 1er juillet 1901 et le décret du 16 août 1901, ayant pour siège social 96 boulevard Bessières - 75017 Paris FRANCE, sont considérés comme étant responsables de traitements conjoints sur certains traitements concernant vos données personnelles dans la mesure où ils déterminent ensemble les finalités et moyens de ces traitements dans un intérêt commun de votre succès dans votre parcours pédagogique à 42 et pour l’amélioration continue du cursus au sein du réseau 42.
+
+C’est notamment le cas concernant la gestion de votre candidature et l’inscription à un Campus 42 et concernant la gestion de votre parcours pédagogique à travers l’Intranet.
+
+L’Association 42 peut être amenée à traiter certaines de vos données personnelles de façon autonome, et ce, notamment dans le cadre de la gestion du réseau 42.
+
+Cela concerne par exemple la gestion du réseau informatique de 42 ou encore la réalisation d’études qualitatives/quantitatives pour améliorer les outils développés par 42.
+
+Enfin, le Campus dans lequel vous effectuez votre scolarité peut également être amené à effectuer des traitements sur vos données personnelles de manière autonome.
+
+C’est notamment le cas concernant les traitements de données liés à la gestion des accès aux locaux (contrôle d’accès, gestion des badges, vidéosurveillance), ou encore les traitements de données liés à la gestion des communications concernant les événements propres au Campus.
+
+L’Association 42 a désigné un Délégué à Protection des Données (ou DPO) en charge de l’ensemble des problématiques liées à la protection des données personnelles au sein de l’Association 42.
+
+Vous pouvez prendre contact avec l’Association 42 et son DPO : - par courrier électronique : dpo@42.fr - par courrier postal : Le Délégué à la Protection des données - Association 42 - 96 boulevard Bessières - 75017 Paris - FRANCE
+
+Pour connaître le nom du DPO ou du référent sur la protection des données personnelles dans votre Campus de rattachement, merci de contacter directement votre Campus dont les coordonnées se trouvent sur le site internet du Campus.
+2. Quelles données personnelles sont traitées par l’Association 42 et mon Campus de rattachement et quand sont-elles collectées ?
+
+Conformément à la législation applicable, nous collectons uniquement des données personnelles adéquates, pertinentes et non excessives au regard des finalités pour lesquelles elles sont collectées. La nature des données personnelles collectées varie ainsi en fonction de votre profil et des services sollicités.
+
+En toute hypothèse, nous vous informerons lorsque nous collecterons des données personnelles vous concernant en vous indiquant au minimum l’identité du responsable de traitement, la ou les finalités poursuivies et vos droits sur vos données personnelles.
+
+A titre d’illustration, lorsque vous souhaitez vous inscrire à 42 sur le site “Admissions” de votre Campus de rattachement, nous sommes susceptibles de collecter les données personnelles suivantes : - Email - Prénom - Nom - Date et lieu de naissance - Adresse postale - Photographie - Genre - Nationalité - Numéro de téléphone - Informations de contact d’urgence (n° de téléphone, nom, prénom, affiliation) - Tickets d’incident - Résultats des tests
+
+Parallèlement aux données personnelles que vous nous communiquez directement, nous sommes également susceptibles de collecter des données personnelles vous concernant sans communication directe de votre part. C’est notamment le cas lorsque vous naviguez sur nos sites internet Admissions, l'Intranet, voxotron.42.fr, etc. sur lesquels votre adresse IP est automatiquement collectée à des fins de sécurité de nos services et de l’infrastructure du site.
+
+Afin d'améliorer la performance de nos sites, nous hébergeons un serveur Sentry chargé de collecter les rapports de bug de nos sites internet, notamment l'Intranet. Cet outil est susceptible de collecter les données personnelles suivantes en cas de bug : - Navigateur utilisé - Appareil utilisé - Adresse IP - Données de navigation
+
+Par ailleurs, nous utilisons sur nos sites internet Admissions et Intranet, l’outil GOOGLE ANALYTICS édité par la société GOOGLE LLC qui permet de collecter les informations suivantes sur l’utilisateur de façon passive : - Navigateur utilisé - Appareil utilisé - Adresse IP - Données de navigation
+
+La collecte de données réalisée par ces outils se déclenche uniquement après acceptation de votre part des cookies. Vous pouvez obtenir davantage d’informations sur les cookies que nous utilisons dans l’article 6 du présent document.
+3. Pour quelles raisons l’Association 42 et mon Campus de rattachement traitent-ils mes données personnelles ?
+
+Toutes les données personnelles que nous traitons sont collectées pour des finalités déterminées, explicites et légitimes et ne feront pas l’objet d’un traitement ultérieur qui serait incompatible avec ces finalités.
+
+Les finalités d’un traitement sont les objectifs poursuivis par le responsable de traitement lors de la collecte des données personnelles.
+
+Ces finalités varient en fonction du traitement concerné.
+
+Lorsque nous traitons vos projets ou vos résultats, la finalité de ce traitement est le suivi de votre parcours pédagogique.
+
+Vous pouvez retrouver l’intégralité des finalités de traitement réalisées par l’Association 42 et/ou votre Campus de rattachement dans les tableaux présentés au début de la présente Politique.
+
+Par ailleurs, à l’issue de la période de conservation de vos données (cf. article 8), nous sommes susceptibles d’utiliser vos données personnelles de façon anonymisée à des fins statistiques.
+
+Nous ne traiterons jamais vos données personnelles pour des finalités autres que celles-ci sans vous en avoir préalablement informé et, le cas échéant, sollicité votre consentement.
+4. Quels sont les fondements légaux des traitements de mes données personnelles ?
+
+La réglementation exige que tout traitement de données personnelles repose sur un fondement légal. C’est l’existence d’un fondement légal qui va conditionner la licéité d’un traitement de données personnelles.
+
+La réglementation prévoit différents fondements légaux pouvant justifier un traitement de données personnelles, tels que le consentement de la personne, la nécessité du traitement au regard de l’exécution contractuelle ou encore le respect d’une obligation légale.
+
+A 42, les traitements de vos données personnelles reposent alternativement sur les fondements suivants : - Le respect d’une obligation légale ; - Votre consentement exprès et préalable ; - L’existence d’un intérêt légitime de l’Association 42 et/ou de votre Campus de rattachement, notamment les intérêts légitimes suivants : - Intérêt légitime à assurer le bon fonctionnement, la sécurité et l'accessibilité des outils pédagogiques Intérêt légitime à assurer le bon déroulement du parcours pédagogique - Intérêt légitime à construire un réseau d'anciens étudiants - Intérêt légitime à produire des statistiques pour évaluer et améliorer la pédagogie au sein du réseau 42 - La nécessité du traitement aux fins de l’exécution des mesures précontractuelles ou du contrat conclu entre vous, et l’Association 42 ou votre Campus de rattachement ;
+
+Le fondement légal du traitement de vos données personnelles varie en fonction du traitement concerné.
+
+A titre d’illustration, la gestion de la vidéosurveillance utilisée au sein des locaux peut reposer sur l’intérêt légitime du Campus consistant à prévenir les atteintes aux biens et aux personnes.
+5. Suis-je obligé de renseigner mes données personnelles ?
+
+De façon générale, nous ne vous obligerons pas à nous communiquer vos données personnelles. Néanmoins, la communication de certaines données personnelles est nécessaire à la fourniture des services que nous proposons.
+
+Ces données sont identifiables par la présence d’un astérisque « * ».
+
+Si vous ne souhaitez pas nous communiquer ces données essentielles, nous ne pourrons pas vous garantir l’accès au(x) service(s) concerné(s).
+6. Comment gérer mes préférences en matière de cookies ?
+
+Nous utilisons des cookies afin de mesurer l’audience de nos sites.
+
+Un cookie est un petit fichier texte déposé sur le disque dur de l’internaute par le serveur du site visité ou par un serveur tiers.
+
+Nous n'utiliserons jamais de cookies de mesure d'audience sans votre consentement. Vous avez la possibilité d'activer ou désactiver ces cookies en cliquant sur l'onglet « Politique de cookies » sur les sites concernés.
+
+Si vous souhaitez obtenir plus d'informations à ce sujet, vous pouvez consulter cette page dédiée.
+7. Suis-je susceptible de faire l’objet d’une prise de décision automatisée?
+
+Une prise de décision automatisée peut se définir comme une décision prise à l’égard d’une personne, par le biais d’algorithmes appliqués à ses données personnelles, sans qu’aucun être humain n’intervienne dans le processus.
+
+Lorsque vous candidatez à 42 sur la plateforme Admissions de votre Campus de rattachement, certaines de vos données personnelles sont utilisées de façon automatisée, via un algorithme, afin de valider les différents tests accomplis.
+
+Ainsi, nous utilisons un premier algorithme afin de valider les niveaux de logique et de mémoire des candidats pour leur permettre d’aller plus loin dans le processus de candidature. Cet algorithme évalue les niveaux débloqués sur les différents jeux afin de définir si un candidat a démontré suffisamment de compétences pour poursuivre les étapes de sélection suivantes. Il ne se base que sur les résultats des tests et ne fait qu'évaluer les niveaux atteints.
+
+Les candidats ayant échoué à ces tests ne peuvent pas continuer le processus de candidature.
+
+Nous utilisons également un second algorithme à l’issue des étapes de « piscine » afin de déterminer les candidats éligibles à une admission au sein de 42. Cependant, cette évaluation n’implique pas une admission automatique. Les résultats de cet algorithme sont soumis à un examen final par l’équipe pédagogique, qui tient compte de critères supplémentaires comme la motivation et l’engagement, afin de prendre une décision définitive.
+
+Par ailleurs, il est important de noter que les critères et seuils utilisés par l’algorithme peuvent varier d’une piscine à l’autre sur un même campus.
+8. Combien de temps seront conservées mes données personnelles ?
+
+Nous nous engageons à conserver vos données personnelles uniquement pendant la durée nécessaire à l’accomplissement des finalités du traitement concerné.
+
+Cette durée de conservation va nécessairement varier en fonction du type de donnée et du traitement concerné.
+
+Certaines dispositions légales nous obligent par ailleurs à conserver vos données pendant une durée minimum.
+
+Pour connaître, pour chaque traitement, la durée pendant laquelle nous conservons les données concernées, veuillez vous référer aux tableaux récapitulatifs des traitements disponibles en début de document.
+
+A l’issue de cette période, et sauf avis contraire de votre part, nous procéderons à la suppression de vos données personnelles ou à leur anonymisation à des fins statistiques.
+9. Mes données personnelles sont-elles en sécurité ?
+
+Nous prenons au sérieux la sécurité de vos données personnelles. C’est pourquoi nous avons adopté en interne des mesures permettant de garantir autant que possible l’intégrité et la confidentialité de vos données.
+
+Parmi les mesures que nous avons adoptées figurent les suivantes :
+
+Concernant les ressources humaines au sein de l’Association 42 : - Vérification des antécédents de chaque candidat - Signature d'un accord de confidentialité et d'une charte informatique par les salariés - Matériel informatique sécurisé - Formations sur la protection des données personnelles et sur la sécurité - Restriction des accès aux données personnelles aux besoins d’en connaître
+
+Concernant la sécurité physique au sein de l’Association 42: - Surveillance des locaux 24h/24 par un système de vidéosurveillance - Contrôle d’accès aux locaux
+
+Concernant les outils pédagogiques de 42 : - Authentification sécurisée - Journalisation des accès utilisateurs
+
+Pour en savoir plus sur les mesures de sécurité mises en place dans votre Campus de rattachement, veuillez directement vous rapprocher du service en charge.
+10. Où sont stockées mes données personnelles ?
+
+Vos données personnelles sont principalement stockées dans des bases de données situées au sein de l’Union Européenne.
+
+Néanmoins, en raison de l’organisation de l’Association 42 et de son réseau de campus à l’international, certaines données personnelles peuvent être transférées dans des pays situés en dehors de l’Union Européenne.
+
+C’est le cas concernant les données personnelles collectées à partir de l'Intranet de 42, lesquelles sont accessibles depuis l’ensemble des Campus de l’Association 42, à savoir : - En Europe (Allemagne, Autriche, Belgique, Espagne, Finlande, France, Italie, Pays-Bas, Pologne, Portugal, République Tchèque) - En Angola, - En Arménie, - En Australie, - Au Brésil, - Au Canada, - En Corée du Sud, - Aux Emirats Arabes Unis, - Au Japon, - En Jordanie, - Au Liban, - Au Luxembourg, - A Madagascar, - En Malaisie, - Au Maroc, - En Palestine, - Au Royaume-Unis, - A Singapour, - En Suisse, - En Thaïlande, - En Turquie.
+
+Cette liste est susceptible d’évoluer en fonction de l’ouverture de nouveaux campus au sein du Réseau 42. Pour connaître la liste complète et actualisée des Campus, cliquez ici.
+
+Dans ces hypothèses, nous vous garantissons que ces transferts sont réalisés à destination de pays assurant un niveau de protection équivalent à celui garanti au sein de l’Union Européenne ou sont encadrés par des outils contraignants, tels que la signature des Clauses Contractuelles Types de la Commission Européenne, dans leur version de Juin 2021, permettant ainsi de répondre aux exigences de la réglementation applicable.
+
+Vous pouvez à tout moment demander à l’Association 42 comment sont encadrés les transferts de données personnelles en dehors de l’Union Européenne en adressant votre demande à : dpo@42.fr.
+
+En outre, comme nous le précisons ci-dessous, nous encadrons strictement la communication de vos données personnelles vers nos prestataires afin d’en assurer l’intégrité et la confidentialité.
+11. Qui sont les destinataires de mes données ? Avec qui l’Association 42 partage-t-elle mes données personnelles ?
+
+Un destinataire est défini comme toute personne habilitée à obtenir communication des données en raison de ses fonctions.
+
+Au sein de 42, vos données peuvent être rendues accessibles aux équipes pédagogique, informatique ou administrative de l’Association 42 en fonction des finalités poursuivies mais également aux mêmes équipes de votre Campus de rattachement.
+
+Les données personnelles que nous collectons peuvent également être partagées avec des sociétés tierces dans les cas suivants : - Quand nous avons recours aux services d’un sous-traitant en vue de l’accomplissement des finalités d’un traitement ; - Si la loi l’exige, nous pouvons effectuer la transmission de données pour donner suite aux réclamations présentées contre nous et nous conformer aux obligations résultant de procédures administratives et judiciaires ; - Si l’Association 42 et/ou votre Campus de rattachement est impliqué dans une opération de fusion, acquisition, cession d’actifs ou procédure de redressement judiciaire, nous pourrons être amenés à céder ou partager tout ou partie de nos actifs, y compris les données personnelles. Dans ce cas, vous serez informés, avant que les données personnelles ne soient transférées à une tierce partie.
+
+En toute hypothèse, nous nous engageons à : - Transmettre vos données personnelles uniquement lorsque cela est nécessaire à l’accomplissement de la finalité du traitement ; - Transmettre vos données personnelles uniquement à des prestataires présentant des garanties suffisantes en matière de protection des données personnelles ; - Encadrer strictement les traitements de données personnelles effectués pour notre compte par nos sous-traitants ; - Ne jamais revendre vos données personnelles à des tiers.
+12. Quels sont mes droits vis-à-vis de mes données personnelles ?
+
+Du fait de notre activité, nous sommes amenés à réaliser différents traitements sur vos données personnelles.
+
+Cependant, vous seul restez maître de vos données et de l’utilisation qui en est faite. C’est pourquoi vous disposez des droits suivants vis-à-vis de vos données personnelles : - Vous pouvez accéder à l’ensemble de vos données personnelles traitées par l’Association 42 et/ou votre Campus de rattachement ; - Vous pouvez mettre à jour ou demander la suppression de vos données personnelles ; - Vous pouvez vous opposer au traitement de vos données personnelles ; - Vous pouvez retirer votre consentement à tout moment ; - Vous pouvez solliciter la communication dans un format interopérable de l’ensemble de vos données personnelles traitées par l’Association 42 et votre Campus de rattachement afin d’exercer votre droit à la portabilité.
+
+Si vous souhaitez exercer vos droits, nous vous invitons à adresser votre demande directement depuis le site Admissions ou depuis l’Intranet.
+
+Il vous est toujours possible de contacter votre Campus pour toute demande liée à vos données personnelles. Les informations de contact se trouvent sur le site internet du Campus.
+
+Enfin, vous pouvez également faire votre demande à l’adresse suivante : - Par courrier électronique : dpo@42.fr - Par courrier, à l’adresse suivante : Délégué à la protection des données Association 42 - 96 boulevard Bessières - 75017 Paris - FRANCE
+
+Dans le cadre du traitement de votre demande, nous sommes susceptibles de vous demander une preuve d’identité afin d’en vérifier l’exactitude.
+
+En toute hypothèse, nous nous engageons à vous apporter une réponse dans un délai d’un mois, éventuellement prorogeable une fois compte tenu de la complexité et du nombre de demandes.
+
+Nous vous rappelons qu’en cas de litige concernant les traitements de vos données personnelles, vous avez la possibilité d’introduire une réclamation auprès de l’autorité de contrôle compétente.
+
+En France, cette autorité est la Commission National Informatique et Libertés (CNIL), dont voici l’adresse du site internet : www.cnil.fr. Nous vous invitons à vous rapprocher de votre Campus de rattachement afin de connaître l’autorité de contrôle du pays dans lequel votre Campus est situé.
+13. Evolution de la présente Politique de confidentialité
+
+Cette présente Politique de confidentialité peut être modifiée à tout moment. Si une modification est apportée à la présente Politique de confidentialité, nous nous engageons à publier la nouvelle version sur nos sites Admissions et l’Intranet. La date de la dernière mise à jour de ladite Politique sera systématiquement publiée à la fin du présent document.
+
+Si vous n’êtes pas d’accord avec les termes de la nouvelle rédaction, vous avez la possibilité de demander la suppression de vos données personnelles.
+
+Dernière mise à jour le: 12 février 2025
+

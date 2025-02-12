@@ -11,7 +11,9 @@ CPPFLAGS    += -I srcs/libft
 CPPFLAGS    += -I srcs/libmlx
 CPPFLAGS    += -I includes
 
-SRCS        = srcs/fractol.c
+SRCS        += srcs/fractol_main.c
+SRCS		+= srcs/event.c
+SRCS		+= srcs/fractol_quit.c
 
 OBJS        = $(SRCS:.c=.o)
 

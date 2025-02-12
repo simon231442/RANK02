@@ -17,6 +17,11 @@
 # include "libft.h"
 # include "mlx.h"
 
+# define WIN_X 800
+# define WIN_Y 800
+
+# define ESC_KEY 0xFF1B
+
 typedef struct s_vars
 {
     void    *mlx;
@@ -32,6 +37,12 @@ typedef struct s_data
     int     endian;
 }   t_data;
 
+typedef struct s_env
+{
+    t_vars  mlx;
+    t_data  img;
+}   t_env;
+
 /*
 ** Create a new window.
 **
@@ -42,6 +53,7 @@ typedef struct s_data
 ** @return	void*			the window instance pointer.
 */
 void	*mlx_new_window(void *mlx_ptr, int size_x, int size_y, char *title);
-
+int     event(int hook, void *env);
+void    fractol_quit(t_env *env);
 
 #endif
