@@ -11,10 +11,16 @@
 /* ************************************************************************** */
 
 #include "fractol.h"
-
+//renomer
+int close_window(void *param)
+{
+    fractol_quit((t_env *)param);
+    return (0);
+}
+//modifier renomer
 int	event(int hook, void *env)
 {
-	if (hook == ESC_KEY || hook == DestroyNotify)
+	if (hook == ESC_KEY)
 		fractol_quit((t_env *)env);
 	return (0);
 }

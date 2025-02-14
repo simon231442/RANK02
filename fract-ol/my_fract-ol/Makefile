@@ -15,9 +15,9 @@ SRCS        += srcs/fractol_main.c
 SRCS		+= srcs/env_init.c
 SRCS		+= srcs/event.c
 SRCS		+= srcs/fractol_quit.c
-SRCS		+= srcs/fractal_render.c
-SRCS		+= srcs/mandelbrot.c
-SRCS		+= srcs/my_mlx_pixel_put.c
+#SRCS		+= srcs/fractal_render.c
+#SRCS		+= srcs/mandelbrot.c
+#SRCS		+= srcs/my_mlx_pixel_put.c
 
 OBJS        = $(SRCS:.c=.o)
 
