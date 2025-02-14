@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                           *                */
 /*                                                          * *               */
-/*   event.c                                               *   *              */
+/*   srcs/env_init.c                                       *   *              */
 /*                                                        * * * *             */
 /*   By: srenaud <srenaud@student.42lausanne.ch>         *       *            */
 /*                                                      * *     * *           */
-/*   Created: 2025/02/13 14:27:11 by srenaud           *   *   *   *          */
-/*   Updated: 2025/02/13 14:27:11 by srenaud          * * * * * * * *         */
+/*   Created: 2025/02/13 16:20:00 by srenaud           *   *   *   *          */
+/*   Updated: 2025/02/13 16:20:00 by srenaud          * * * * * * * *         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
-int	event(int hook, void *env)
+t_env	*env_init(void)
 {
-	if (hook == ESC_KEY || hook == DestroyNotify)
-		fractol_quit((t_env *)env);
-	return (0);
+	t_env	*env;
+
+	env = malloc(sizeof(t_env));
+	if (!env)
+		return (NULL);
+	env->mlx = malloc(sizeof(t_vars));
+	if (!env->mlx)
+	{
+		free(env);
+		return (NULL);
+	}
+	env->img = malloc(sizeof(t_data));
+	if (!env->img)
+	{
+		free(env->mlx);
+		free(env);
+		return (NULL);
+	}
+	return (env);
 }
