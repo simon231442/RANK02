@@ -12,16 +12,17 @@
 
 #include "fractol.h"
 
-static int	is_in_bulb(double x, double y)
+static int	is_in_bulb(double x, double y) 					// check if the point is in the bulb. the bulb is a circle with a radius of 1/4
 {
-	double	p;
-	double	q;
+	double	p; 												// distance from the point to the center of the bulb
+	double	q;												// distance from the point to the center of the main cardioid
+															// the main cardioid is a circle with a radius of 1/2
 
-	p = sqrt(((x - 0.25) * (x - 0.25)) + (y * y));
-	q = p - (2 * (p * p)) + 0.25;
-	if (x < q)
+	p = sqrt(((x - 0.25) * (x - 0.25)) + (y * y));			// calculate the distance from the point to the center of the bulb
+	q = p - (2 * (p * p)) + 0.25;				// calculate the distance from the point to the center of the main cardioid		
+	if (x < q)											// if the point is inside the bulb		
 		return (1);
-	if ((((x + 1) * (x + 1) + y * y)) < (1.0 / 16.0))
+	if ((((x + 1) * (x + 1) + y * y)) < (1.0 / 16.0)) 			// if the point is inside the smaller bulb
 		return (1);
 	return (0);
 }
@@ -31,7 +32,7 @@ static void	calculate_iterator(t_m_struct *data, t_complex *z)
 	t_fractal	*f;
 
 	f = &data->f;
-	if (f->fractal_type == 2 && is_in_bulb(z->real, z->im))
+	if (f->fractal_type == 2 && is_in_bulb(z->real, z->im))  // if the point is in the bulb, set the iterator to the maximum number of iterations
 	{
 		f->iter = MAX_ITER;
 		f->magnitude = 0.0;
@@ -58,9 +59,9 @@ void	set_color(t_m_struct *data, t_complex *z)
 	set_gradient(data);
 }
 
-int	render(t_m_struct *data)
+int	render(t_m_struct *data) 					// render the fractal, render means to draw the fractal
 {
-	if (!data->request_render)
+	if (!data->request_render)					// if the render is not requested, return 0
 		return (0);
 	data->request_render = 0;
 	view_draw(data);

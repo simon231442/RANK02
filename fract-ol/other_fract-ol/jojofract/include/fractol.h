@@ -156,7 +156,9 @@ typedef struct s_image
 	int		total_bytes;
 	int		pixels_per_line;
 	int		size_line;
-	int		endian;
+	int		endian;  	//in this project, it is always 0, which means little endian. 
+						//example: 0x12345678, the 0x78 is the first byte, 0x12 is the last byte
+						//in endianess, the first byte corespond to red
 }	t_myimage;
 
 typedef struct s_m_struct t_m_struct;
@@ -182,7 +184,7 @@ struct s_m_struct
 	void		*mlx_ptr; //a void pointer that contains the base_address returned by mlx_init() 
 	void		*win;
 	int 		final_color;
-	int			request_render;
+	int			request_render;		// when the render is requested, it will be set to 1
 	int			is_control_pressed;
 	t_myimage	image;
 	t_view		view;

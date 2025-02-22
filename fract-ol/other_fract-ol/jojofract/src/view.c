@@ -12,7 +12,7 @@
 
 #include "fractol.h"
 
-int	request_render(t_m_struct *data)
+int	request_render(t_m_struct *data) // this function is called when the render is requested
 {
 	data->request_render = 1;
 	return (0);
@@ -56,7 +56,7 @@ void	view_update(t_m_struct *data)
 	real_offset = -view->center_x * view->pixel_to_complex;
 	im_offset = view->center_y * view->pixel_to_complex;
 	i = 0;
-	while (i < WIN_WIDTH)
+	while (i < WIN_WIDTH)                         // update the real and imaginary coordinates
 	{
 		view->real_coords[i] = i * view->pixel_to_complex + real_offset;
 		i++;
@@ -67,12 +67,12 @@ void	view_update(t_m_struct *data)
 		view->imag_coords[i] = -i * view->pixel_to_complex + im_offset;
 		i++;
 	}
-	request_render(data);
+	request_render(data);		
 }
 
 void	view_init(t_m_struct *data)
 {
-	data->view.center_x = data->f.center_x;
+	data->view.center_x = data->f.center_x;				// set the center of the view to the center of the fractal
 	data->view.center_y = data->f.center_y;
 	data->view.scale = SCALE;
 	view_update(data);

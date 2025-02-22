@@ -2,21 +2,25 @@
 /*                                                                            */
 /*                                                           *                */
 /*                                                          * *               */
-/*   my_mlx_pixel_put.c                                    *   *              */
+/*   sierpinski.c                                          *   *              */
 /*                                                        * * * *             */
 /*   By: srenaud <srenaud@student.42lausanne.ch>         *       *            */
 /*                                                      * *     * *           */
-/*   Created: 2025/02/13 20:59:01 by srenaud           *   *   *   *          */
-/*   Updated: 2025/02/13 20:59:01 by srenaud          * * * * * * * *         */
+/*   Created: 2025/02/20 12:16:02 by srenaud           *   *   *   *          */
+/*   Updated: 2025/02/20 12:16:02 by srenaud          * * * * * * * *         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
+int sierpinski(int x, int y)
 {
-	char	*dst;
-
-	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
-	*(unsigned int*)dst = color;
+	while (x > 0 || y > 0)
+	{
+		if (x % 2 == 1 && y % 2 == 1)
+			return 0x00000000; // Black
+		x /= 2;
+		y /= 2;
+	}
+	return 0x00FFFFFF; // White
 }

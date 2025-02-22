@@ -19,8 +19,8 @@
 # include <mlx.h>
 # include <X11/X.h>
 
-# define WIN_X 800
-# define WIN_Y 800
+# define WIN_X 2400
+# define WIN_Y 1600
 
 # define ESC_KEY 0xFF1B
 
@@ -51,7 +51,8 @@ int		event(int hook, void *env);
 void	fractol_quit(t_env *env);
 int 	close_window(void *param);
 
-//void	fractal_render(t_env *env);
-//int		mandelbrot(double real, double imag);
-//void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
+void	fractal_render(t_env *env);
+int		mandlebrot(double a, double b);
+int 	sierpinski(int x, int y);
+void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
 #endif
