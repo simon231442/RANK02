@@ -31,5 +31,18 @@ t_env	*env_init(void)
 		free(env);
 		return (NULL);
 	}
+	env->nbc = malloc(sizeof(t_nbc));
+	if (!env->nbc)
+	{
+		free(env->img);
+		free(env->mlx);
+		free(env);
+		return (NULL);
+	}
+	env->nbc->min_re = MIN_RE;
+	env->nbc->max_re = MAX_RE;
+	env->nbc->min_im = MIN_IM;
+	env->nbc->max_im = MAX_IM;
+	env->nbc->max_iter = MAX_ITER;
 	return (env);
 }

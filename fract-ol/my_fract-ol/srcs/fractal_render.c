@@ -17,6 +17,8 @@ void	fractal_render(t_env *env)
 {
 	int x;
 	int y;
+	double a;
+	double b;
 	int color;
 
 	y = 0;
@@ -25,7 +27,9 @@ void	fractal_render(t_env *env)
 		x = 0;
 		while (x < WIN_X)
 		{
-			color = mandlebrot((x - 2 / 3 * WIN_X) * 3 / WIN_X, (y = WIN_Y / 2) * 2/ WIN_Y);
+			a = env->nbc->min_re + x * (env->nbc->max_re - env->nbc->min_re) / WIN_X;
+			b = env->nbc->min_im + y * (env->nbc->max_im - env->nbc->min_im) / WIN_Y;
+			color = mandlebrot(a, b);
 			my_mlx_pixel_put(env->img, x, y, color);
 			x++;
 		}

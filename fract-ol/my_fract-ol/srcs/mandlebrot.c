@@ -15,22 +15,22 @@
 
 int	mandlebrot(double a, double b)
 {
-	double		tmp_real;
-	double		tmp_imag;
-	int			i;
-	int			max_iter;
+	double	x;
+	double	y;
+	double	tmp;
+	int		iter;
 
-	i = 0;
-	max_iter = 100;
-	while (a * a + b * b <= 4)
+	x = 0;
+	y = 0;
+	iter = 0;
+	while (x * x + y * y <= 4 && iter < MAX_ITER)
 	{
-		tmp_real = a;
-		tmp_imag = b;
-		a = tmp_real * tmp_real - tmp_imag * tmp_imag + tmp_real;
-		b = 2 * tmp_real * tmp_imag + tmp_imag;
-		i++;
-		if (i > max_iter)
-			return (0x00000000); // Black
+		tmp = x * x - y * y + a;
+		y = 2 * x * y + b;
+		x = tmp;
+		iter++;
 	}
-	return (0x00FFFFFF); // White
+	if (iter == MAX_ITER)
+			return 0x00000000; // Black
+	return 0x00FFFFFF; // White
 }

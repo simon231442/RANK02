@@ -21,6 +21,11 @@
 
 # define WIN_X 2400
 # define WIN_Y 1600
+# define MIN_RE -2
+# define MAX_RE 1
+# define MIN_IM -1.5
+# define MAX_IM 1.5
+# define MAX_ITER 50
 
 # define ESC_KEY 0xFF1B
 
@@ -39,10 +44,20 @@ typedef struct s_data
 	int		endian;
 }	t_data;
 
+typedef struct s_nbc
+{
+	int		min_re;
+	int		max_re;
+	int		min_im;
+	int		max_im;
+	int		max_iter;
+}	t_nbc;
+
 typedef struct s_env
 {
 	t_vars	*mlx;
 	t_data	*img;
+	t_nbc	*nbc;
 }	t_env;
 
 
@@ -52,7 +67,7 @@ void	fractol_quit(t_env *env);
 int 	close_window(void *param);
 
 void	fractal_render(t_env *env);
-int		mandlebrot(double a, double b);
+int		mandlebrot(double x, double y);
 int 	sierpinski(int x, int y);
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
 #endif
