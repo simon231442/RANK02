@@ -20,12 +20,14 @@
 # include <X11/X.h>
 
 # define WIN_X 2400
-# define WIN_Y 1600
-# define MIN_RE -2.5
-# define MAX_RE 1.0
-# define MIN_IM -1.5
-# define MAX_IM 1.5
-# define MAX_ITER 10
+# define GOLDEN_RATIO 1.61803398875
+# define WIN_Y (WIN_X / GOLDEN_RATIO)
+# define MIN_RE -2
+# define MAX_RE -MIN_RE / GOLDEN_RATIO
+# define MIN_IM MIN_RE / 2
+# define MAX_IM -MIN_RE / 2
+
+# define MAX_ITER 500
 
 # define ESC_KEY 0xFF1B
 

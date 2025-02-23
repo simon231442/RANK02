@@ -32,5 +32,7 @@ int	mandlebrot(double a, double b)
 	}
 	if (iter == MAX_ITER)
 			return 0x00000000; // Black
-	return 0x00FFFFFF; // White
+	 // Calculate gradient color from white to grey
+    int color = 0xFFFFFF - (0x010101 * (255 * iter / MAX_ITER));
+    return color;
 }
