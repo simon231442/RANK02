@@ -57,13 +57,13 @@ typedef struct s_nbc
 
 typedef struct s_env
 {
-	t_vars	mlx;
-	t_data	img;
-	t_nbc	nbc;
+	t_vars	*mlx;
+	t_data	*img;
+	t_nbc	*nbc;
 }	t_env;
 
 
-void	env_init(t_env *env);
+t_env	*env_init(void);
 int		event(int hook, void *env);
 void	fractol_quit(t_env *env);
 int 	close_window(void *param);

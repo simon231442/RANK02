@@ -14,7 +14,7 @@
 
 void	fractol_quit(t_env *env)
 {
-	mlx_destroy_window(env->mlx->mlx, env->mlx->win);
-	mlx_destroy_display(env->mlx->mlx);
+	mlx_destroy_window(env->mlx.mlx, env->mlx.win);
+	mlx_destroy_display(env->mlx.mlx);
 	exit(0);
 }

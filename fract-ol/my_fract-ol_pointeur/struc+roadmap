@@ -1,0 +1,93 @@
+[Feuille de route]
+; Tâche : Initialiser la structure du projet
+Statut : Terminé
+Détails : 
+- Configurer la structure initiale du répertoire.
+- Initialiser le contrôle de version avec Git.
+- Créer le fichier README initial.
+
+; Tâche : Implémenter l'algorithme de génération de fractales
+Statut : En cours
+Détails : 
+- Rechercher différents algorithmes de génération de fractales.
+- Implémenter l'algorithme choisi dans le code.
+- Tester l'algorithme avec différents paramètres.
+
+; Tâche : Créer l'interface utilisateur
+Statut : En attente
+Détails : 
+- Concevoir la mise en page de l'interface utilisateur.
+- Implémenter l'interface en utilisant un framework approprié.
+- Assurer que l'interface est réactive et conviviale.
+
+; Tâche : Ajouter la fonctionnalité de zoom
+Statut : En attente
+Détails : 
+- Implémenter les fonctionnalités de zoom avant et arrière.
+- Assurer des transitions fluides lors du zoom.
+- Tester la fonctionnalité de zoom avec différentes images fractales.
+
+; Tâche : Optimiser les performances
+Statut : En attente
+Détails : 
+- Identifier les goulets d'étranglement de performance dans le processus de génération de fractales.
+- Optimiser le code pour réduire le temps de calcul.
+- Tester les améliorations de performance avec de grandes images.
+
+; Tâche : Rédiger la documentation
+Statut : En attente
+Détails : 
+- Documenter la base de code avec des commentaires et des explications.
+- Créer un guide utilisateur avec des instructions sur l'utilisation de l'application.
+- Fournir des exemples et des captures d'écran dans la documentation.
+
+---
+
+**Structure de fichiers suggérée :**
+
+- Makefile  
+- includes/  
+  - fractol.h  
+  - bonus.h (pour les fonctions bonus ; optionnel)  
+- srcs/  
+  - main.c         // Initialisation de la fenêtre, boucle principale  
+  - fractal.c      // Calcul des fractales (Mandelbrot, Julia, etc.)  
+  - render.c       // Fonctions d'affichage (dessin de pixels, image, palette)  
+  - events.c       // Gestion des événements clavier et souris (fermeture, zoom, déplacement)  
+  - utils.c        // Fonctions utilitaires (conversion de coordonnées, gestion d'erreurs, etc.)
+
+---
+
+**Roadmap :**
+
+1.  **Initialisation & configuration**  
+ - Vérifier que MiniLibX et libft sont correctement installés et liés par le Makefile.  
+ - Configurer votre structure t_vars / t_data dans fractol.h.
+
+2.  **Fenêtre et image**  
+ - Dans main.c, initialiser mlx, créer la fenêtre et une image.  
+ - Afficher l'image dans la fenêtre.
+
+3. **Calcul des fractales**  
+ - Dans fractal.c, implémenter les fonctions qui calculent les points pour Mandelbrot et Julia.  
+ - Mapper les coordonnées de l'image vers le plan complexe.
+
+4. **Rendu graphique**  
+ - Dans render.c, utiliser un pixel put perso (my_mlx_pixel_put) pour dessiner chaque pixel  
+ - Appliquer un algorithme de palette pour colorer en fonction du nombre d'itérations.
+
+5. **Gestion des événements**  
+ - Dans events.c, créer des fonctions pour gérer les événements clavier (fermeture avec ESC) et souris (zoom & déplacement).  
+ - Ajouter les hooks mlx_hook et mlx_key_hook (et mlx_mouse_hook pour le zoom).
+
+6. **Intégration du zoom et déplacement**  
+ - Commencer par faire un zoom simple centré sur la souris. (Pour bonus, intégrer éventuellement le suivi de la souris.)  
+ - Mettre à jour les bornes du plan complexe lors du zoom.
+
+7. **Tests et améliorations**  
+ - Affiner l’affichage des fractales (fluidité, gestion de multiples fractales selon le paramètre).  
+ - Effectuer une vérification de la norme et des fuites mémoire.
+
+8. **Extensions bonus (plus tard)**  
+ - Ajouter d’autres types de fractales.  
+ - Gestion des couleurs dynamiques et déplacement avec les flèches.

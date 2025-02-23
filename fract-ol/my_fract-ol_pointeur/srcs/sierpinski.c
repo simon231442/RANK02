@@ -2,38 +2,25 @@
 /*                                                                            */
 /*                                                           *                */
 /*                                                          * *               */
-/*   fractal_render.c                                      *   *              */
+/*   sierpinski.c                                          *   *              */
 /*                                                        * * * *             */
 /*   By: srenaud <srenaud@student.42lausanne.ch>         *       *            */
 /*                                                      * *     * *           */
-/*   Created: 2025/02/13 21:05:29 by srenaud           *   *   *   *          */
-/*   Updated: 2025/02/13 21:05:29 by srenaud          * * * * * * * *         */
+/*   Created: 2025/02/20 12:16:02 by srenaud           *   *   *   *          */
+/*   Updated: 2025/02/20 12:16:02 by srenaud          * * * * * * * *         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	fractal_render(t_env *env)
+int sierpinski(int x, int y)
 {
-	int x;
-	int y;
-	double a;
-	double b;
-	int color;
-
-	y = 0;
-	while (y < WIN_Y)
+	while (x > 0 || y > 0)
 	{
-		x = 0;
-		while (x < WIN_X)
-		{
-			a = env->nbc.min_re + x * (env->nbc.max_re - env->nbc.min_re) / WIN_X;
-			b = env->nbc.min_im + y * (env->nbc.max_im - env->nbc.min_im) / WIN_Y;
-			color = mandlebrot(a, b);
-			my_mlx_pixel_put(&env->img, x, y, color);
-			x++;
-		}
-		y++;
+		if (x % 2 == 1 && y % 2 == 1)
+			return 0x00000000; // Black
+		x /= 2;
+		y /= 2;
 	}
-	mlx_put_image_to_window(env->mlx.mlx, env->mlx.win, env->img.img, 0, 0);
+	return 0x00FFFFFF; // White
 }
