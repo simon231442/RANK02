@@ -19,16 +19,16 @@
 # include <mlx.h>
 # include <X11/X.h>
 
-# define WIN_X 600
+# define WIN_X 800
 # define GOLDEN_RATIO 1.61803398875
 # define WIN_Y (WIN_X / GOLDEN_RATIO)
 # define MIN_RE -2
 # define MAX_RE -MIN_RE / GOLDEN_RATIO
 # define MIN_IM MIN_RE / 2
 # define MAX_IM -MIN_RE / 2
-# define ZOOM 1.1
+# define ZOOM 2
 
-# define MAX_ITER 500
+# define MAX_ITER 100
 
 # define ESC_KEY 0xFF1B
 

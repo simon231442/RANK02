@@ -21,8 +21,8 @@ int	fractal_render(t_env *env)
 	double b;
 	int color;
 
-	y = 0;
-	while (y < WIN_Y)
+	y = WIN_Y;
+	while (y >= 0)
 	{
 		x = 0;
 		while (x < WIN_X)
@@ -33,7 +33,7 @@ int	fractal_render(t_env *env)
 			my_mlx_pixel_put(&env->img, x, y, color);
 			x++;
 		}
-		y++;
+		y--;
 	}
 	return(mlx_put_image_to_window(env->mlx.mlx, env->mlx.win, env->img.img, 0, 0));
 }
