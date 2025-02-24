@@ -13,7 +13,7 @@
 
 #include "fractol.h"
 
-void	fractal_render(t_env *env)
+int	fractal_render(t_env *env)
 {
 	int x;
 	int y;
@@ -35,5 +35,5 @@ void	fractal_render(t_env *env)
 		}
 		y++;
 	}
-	mlx_put_image_to_window(env->mlx.mlx, env->mlx.win, env->img.img, 0, 0);
+	return(mlx_put_image_to_window(env->mlx.mlx, env->mlx.win, env->img.img, 0, 0));
 }

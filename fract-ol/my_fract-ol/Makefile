@@ -19,6 +19,7 @@ SRCS		+= srcs/fractal_render.c
 SRCS		+= srcs/mandlebrot.c
 SRCS		+= srcs/sierpinski.c
 SRCS		+= srcs/my_mlx_pixel_put.c
+SRCS		+= srcs/fractol_zoom.c
 
 OBJS        = $(SRCS:.c=.o)
 

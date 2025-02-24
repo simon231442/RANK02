@@ -24,6 +24,7 @@ int main(void)
 		&env.img.line_length, &env.img.endian); //renvoie un point sur char *(ptr sur premier pixel), par = ptr sur image, nb bit/pixel, taille d'une ligne, emdian info)
 	fractal_render(&env);
 	mlx_key_hook(env.mlx.win, event, &env);
+	mlx_mouse_hook(env.mlx.win, fractol_zoom, &env);
 	mlx_hook(env.mlx.win, DestroyNotify, 0, close_window, &env);
 	mlx_loop(env.mlx.mlx);
 	return (0);

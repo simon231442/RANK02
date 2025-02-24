@@ -19,13 +19,14 @@
 # include <mlx.h>
 # include <X11/X.h>
 
-# define WIN_X 2400
+# define WIN_X 600
 # define GOLDEN_RATIO 1.61803398875
 # define WIN_Y (WIN_X / GOLDEN_RATIO)
 # define MIN_RE -2
 # define MAX_RE -MIN_RE / GOLDEN_RATIO
 # define MIN_IM MIN_RE / 2
 # define MAX_IM -MIN_RE / 2
+# define ZOOM 1.1
 
 # define MAX_ITER 500
 
@@ -68,8 +69,9 @@ int		event(int hook, void *env);
 void	fractol_quit(t_env *env);
 int 	close_window(void *param);
 
-void	fractal_render(t_env *env);
+int		fractal_render(t_env *env);
 int		mandlebrot(double x, double y);
 int 	sierpinski(int x, int y);
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
+int		fractol_zoom(int wheel, int x, int y, t_env *env);
 #endif
