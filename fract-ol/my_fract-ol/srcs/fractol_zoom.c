@@ -17,23 +17,28 @@ int	fractol_zoom(int wheel, int x, int y, t_env *env)
 {
 	double	mouse_re;
 	double	mouse_im;
+	double	tmp;
 
 	mouse_re = env->nbc.min_re + (x * (env->nbc.max_re - env->nbc.min_re) / WIN_X);
 	mouse_im = env->nbc.min_im + (y * (env->nbc.max_im - env->nbc.min_im) / WIN_Y);
 
 	if (wheel == 4)
 	{
-		env->nbc.min_re = mouse_re + (env->nbc.max_re - env->nbc.min_re) / ZOOM / 2;
+		tmp = mouse_re + (env->nbc.max_re - env->nbc.min_re) / ZOOM / 2;
 		env->nbc.max_re = mouse_re - (env->nbc.max_re - env->nbc.min_re) / ZOOM / 2;
-		env->nbc.min_im = mouse_im + (env->nbc.max_im - env->nbc.min_im) / ZOOM / 2;
+		env->nbc.min_re = tmp;
+		tmp = mouse_im + (env->nbc.max_im - env->nbc.min_im) / ZOOM / 2;
 		env->nbc.max_im = mouse_im - (env->nbc.max_im - env->nbc.min_im) / ZOOM / 2;
+		env->nbc.min_im = tmp;
 	}
 	if (wheel == 5)
 	{
-		env->nbc.min_re = mouse_re + (env->nbc.max_re - env->nbc.min_re) * ZOOM * 2;
+		tmp = mouse_re + (env->nbc.max_re - env->nbc.min_re) * ZOOM * 2;
 		env->nbc.max_re = mouse_re - (env->nbc.max_re - env->nbc.min_re) * ZOOM * 2;
-		env->nbc.min_im = mouse_im + (env->nbc.max_im - env->nbc.min_im) * ZOOM * 2;
+		env->nbc.min_re = tmp;
+		tmp = mouse_im + (env->nbc.max_im - env->nbc.min_im) * ZOOM * 2;
 		env->nbc.max_im = mouse_im - (env->nbc.max_im - env->nbc.min_im) * ZOOM * 2;
+		env->nbc.min_im = tmp;
 	}
 	return (fractal_render(env));
 }
