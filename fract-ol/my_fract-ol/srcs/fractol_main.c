@@ -12,11 +12,12 @@
 
 #include "fractol.h"
 
-int main(void)
+int main(int ac, char **av)
 {
 	t_env env;
 
 	env_init(&env);
+	fractol_parse(&env, ac, av);
 	env.mlx.mlx = mlx_init();
 	env.mlx.win = mlx_new_window(env.mlx.mlx, WIN_X, WIN_Y, "fract-ol");
 	env.img.img = mlx_new_image(env.mlx.mlx, WIN_X, WIN_Y); //renvoie un ptr sur image

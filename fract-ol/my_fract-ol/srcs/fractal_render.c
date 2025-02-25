@@ -29,7 +29,10 @@ int	fractal_render(t_env *env)
 		{
 			a = env->nbc.min_re + x * (env->nbc.max_re - env->nbc.min_re) / WIN_X;
 			b = env->nbc.min_im + y * (env->nbc.max_im - env->nbc.min_im) / WIN_Y;
-			color = mandlebrot(a, b);
+			if (env->nbc.mandoujulia == MANDLEBROT)
+				color = mandlebrot(a, b);
+			else
+				color = julia(a, b, env);
 			my_mlx_pixel_put(&env->img, x, y, color);
 			x++;
 		}

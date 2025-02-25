@@ -19,16 +19,17 @@
 # include <mlx.h>
 # include <X11/X.h>
 
-# define WIN_X 1200
+# define WIN_X 800
 # define GOLDEN_RATIO 1.61803398875
 # define WIN_Y (WIN_X / GOLDEN_RATIO)
 # define MIN_RE -2
 # define MAX_RE -MIN_RE / GOLDEN_RATIO
 # define MIN_IM MIN_RE / 2
 # define MAX_IM -MIN_RE / 2
-# define ZOOM 2
+# define ZOOM 4
+# define MANDLEBROT 0
 
-# define MAX_ITER 500
+# define MAX_ITER 200
 
 # define ESC_KEY 0xFF1B
 
@@ -54,6 +55,9 @@ typedef struct s_nbc
 	double	min_im;
 	double	max_im;
 	int		max_iter;
+	int		mandoujulia;
+	double 	julia_re;
+	double 	julia_im;
 }	t_nbc;
 
 typedef struct s_env
@@ -69,8 +73,11 @@ int		event(int hook, void *env);
 void	fractol_quit(t_env *env);
 int 	close_window(void *param);
 
+void	fractol_parse(t_env *env, int ac, char **av);
 int		fractal_render(t_env *env);
 int		mandlebrot(double x, double y);
+int		julia(double x, double y, t_env *env);
+int		fractol_color_gradient(int iter);
 int 	sierpinski(int x, int y);
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
 int		fractol_zoom(int wheel, int x, int y, t_env *env);
