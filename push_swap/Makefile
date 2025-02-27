@@ -6,9 +6,10 @@ CFLAGS += -Wall
 CFLAGS += -Wextra
 CFLAGS += -Werror
 
-CPPFLAGS += -I./include
+CPPFLAGS += -I includes
+CPPFLAGS += -I srcs/libft
 
-SRCS += src/ps_main.c
+SRCS += srcs/ps_main.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -21,7 +22,7 @@ $(LIBFT):
 .PHONY: all
 all: $(NAME)
 $(NAME): $(OBJS) $(LIBFT)
-	$(CC) $(CFLAGS) $(CPPFLAGS) -o $(NAME) -L$(LIBFT_DIR) -lft
+	$(CC) $(CFLAGS) $(CPPFLAGS) -o $(NAME) $(OBJS) -L$(LIBFT_DIR) -lft
 
 .PHONY: clean
 clean:
