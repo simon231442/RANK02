@@ -1,0 +1,64 @@
+Roadmap
+Create the Makefile:
+
+Ensure it compiles your project and links with libft.
+Include rules: all, clean, fclean, re.
+Function to Check Arguments:
+
+Validate the input arguments.
+Ensure they are integers and within the valid range.
+Function to Parse Arguments into an Integer Array:
+
+Convert the validated arguments into an integer array on the stack.
+Function to Sort the Integer Array (Bubble Sort):
+
+Implement bubble sort to sort the integer array.
+Function to Build a Linked List for Stack A:
+
+Create a linked list on the heap for stack A using the sorted integer array.
+Function to Initialize a Linked List for Stack B:
+
+Initialize an empty linked list on the heap for stack B.
+Functions for Each Instruction:
+
+Implement functions for each instruction: RA, RB, SA, SB, etc.
+Function to Apply Radix Sort and Display Instructions:
+
+Implement radix sort to determine the sequence of instructions.
+Display the instructions to sort the arguments.
+Testing:
+
+Test each function step by step to ensure correctness.
+
+File Tree
+push_swap/
+├── includes/
+│   ├── push_swap.h
+│   └── libft.h
+├── libft/
+│   ├── Makefile
+│   ├── libft.h
+│   └── (other libft source files)
+├── src/
+│   ├── main.c
+│   ├── ps_error.c
+│   ├── ps_check_args.c
+│   ├── ps_parse_args.c
+│   ├── ps_sort.c
+│   ├── ps_create_stack_a.c
+│   ├── ps_create_stack_b.c
+│   ├── ps_move_sa.c
+│   ├── ps_move_sb.c
+│   ├── ps_move_ss.c
+│   ├── ps_move_pa.c
+│   ├── ps_move_pb.c
+│   ├── ps_move_ra.c
+│   ├── ps_move_rb.c
+│   ├── ps_move_rr.c
+│   ├── ps_move_rra.c
+│   ├── ps_move_rrb.c
+│   ├── ps_move_rrr.c
+│   └── ps_radix_sort.c
+├── Makefile
+	└── README.md
+
