@@ -10,6 +10,7 @@ CPPFLAGS += -I includes
 CPPFLAGS += -I srcs/libft
 
 SRCS += srcs/ps_main.c
+SRCS += srcs/ps_arg_check_no_arg.c
 
 OBJS = $(SRCS:.c=.o)
 

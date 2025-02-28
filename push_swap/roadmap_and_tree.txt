@@ -59,6 +59,5 @@ push_swap/
 │   ├── ps_move_rrb.c
 │   ├── ps_move_rrr.c
 │   └── ps_radix_sort.c
-├── Makefile
-	└── README.md
-
+└── Makefile
+	

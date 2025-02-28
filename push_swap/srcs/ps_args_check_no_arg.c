@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ps_args_check_no_arg.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 14:12:32 by srenaud           #+#    #+#             */
-/*   Updated: 2025/02/27 14:12:32 by srenaud          ###   ########.fr       */
+/*   Created: 2025/02/27 23:17:23 by srenaud           #+#    #+#             */
+/*   Updated: 2025/02/27 23:17:23 by srenaud          ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-#include "libft.h"
-#include <limits.h>
-#include <unistd.h>
-#include <stdlib.h>
-
-# define EXIT_FAILURE 1
-# define EXIT_SUCCESS 0
-
-void	ps_args_check_no_arg(int ac);
-void	ps_args_error(void);
-
-#endif
+void	ps_args_check_no_arg(int ac)
+{
+    if (ac == 1)
+        ps_args_error();
+}

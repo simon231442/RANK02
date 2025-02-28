@@ -14,7 +14,7 @@
 
 int main(int ac, char **av)
 {
-    (void)ac;
-    ft_printf("%s\n", av[1]);
-    return (0);
+	(void)ac;
+	ft_printf("%s\n", av[1]);
+	return (0);
 }
