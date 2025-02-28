@@ -14,14 +14,18 @@
 # define PUSH_SWAP_H
 
 #include "libft.h"
-#include <limits.h>
 #include <unistd.h>
 #include <stdlib.h>
 
 # define EXIT_FAILURE 1
 # define EXIT_SUCCESS 0
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
 
-void	ps_args_check_no_arg(int ac);
-void	ps_args_error(void);
+char	**ps_args_prepare(int ac, char **av);
+void	ps_args_check_no_arg(int ac, char **args);
+void	ps_args_check_non_numeric(char **args);
+void    ps_args_free(char **args);
+void	ps_error(char **args);
 
 #endif

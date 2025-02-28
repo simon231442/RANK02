@@ -10,9 +10,46 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static int  
+#include "push_swap.h"
 
-void    ps_args_check_over_and_underflow(int ac, char **av)
+static long	atol(char *str);
+
+void    ps_args_check_over_and_underflow(char **args)
 {
+    int 	i;
+	long	nb;
 
+	i = 0;
+	while (args[i])
+	{
+		nb = atol(args[i]);
+		if (nb > INT_MAX || nb < INT_MIN)
+			ps_error(args);
+	}
+}
+
+static long	atol(char *str)
+{
+	long	nb;
+	int		sign;
+	int		i;
+
+	nb = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb * 10 + (str[i] - '0');
+		i++;
+	}
+	return (nb * sign);
 }

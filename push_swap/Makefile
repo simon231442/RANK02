@@ -11,6 +11,8 @@ CPPFLAGS += -I srcs/libft
 
 SRCS += srcs/ps_main.c
 SRCS += srcs/ps_arg_check_no_arg.c
+SRCS += srcs/ps_arg_check_non_numeric.c
+SRCS += srcs/ps_error.c
 
 OBJS = $(SRCS:.c=.o)
 
