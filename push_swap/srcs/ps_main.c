@@ -14,7 +14,10 @@
 
 int main(int ac, char **av)
 {
-	(void)ac;
-	ft_printf("%s\n", av[1]);
+	char	**args;
+
+	args = ps_args_prepare(ac, av);
+	ft_printf("test ok\n");
+	ps_args_free(args);
 	return (0);
 }

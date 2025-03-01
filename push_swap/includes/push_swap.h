@@ -25,6 +25,7 @@
 char	**ps_args_prepare(int ac, char **av);
 void	ps_args_check_no_arg(int ac, char **args);
 void	ps_args_check_non_numeric(char **args);
+void	ps_args_check_over_and_underflow(char **args);
 void    ps_args_free(char **args);
 void	ps_error(char **args);
 

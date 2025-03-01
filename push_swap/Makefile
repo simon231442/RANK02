@@ -10,8 +10,10 @@ CPPFLAGS += -I includes
 CPPFLAGS += -I srcs/libft
 
 SRCS += srcs/ps_main.c
-SRCS += srcs/ps_arg_check_no_arg.c
-SRCS += srcs/ps_arg_check_non_numeric.c
+SRCS += srcs/ps_args_prepare.c
+SRCS += srcs/ps_args_check_no_arg.c
+SRCS += srcs/ps_args_check_non_numeric.c
+SRCS += srcs/ps_args_check_over_and_underflow.c
 SRCS += srcs/ps_error.c
 
 OBJS = $(SRCS:.c=.o)
@@ -21,6 +23,9 @@ LIBFT = $(LIBFT_DIR)/libft.a
 
 $(LIBFT):
 	make -C $(LIBFT_DIR)
+
+%.o: %.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
 .PHONY: all
 all: $(NAME)

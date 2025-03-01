@@ -35,7 +35,7 @@ char	**ps_args_prepare(int ac, char **av)
 	{
 		args = malloc(sizeof(char *) * ac);
 		if (!args)
-			ps_args_error();
+			ps_error(args);
 		while (av[i])
 		{
 			args[i] = ft_strdup(av[i]);
@@ -52,4 +52,5 @@ static void	ps_args_check_all(int ac, char **args)
 {
 	ps_args_check_no_arg(ac, args);
 	ps_args_check_non_numeric(args);
+	ps_args_check_over_and_underflow(args);
 }

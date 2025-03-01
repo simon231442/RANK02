@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static long	atol(char *str);
+static long	ps_atol(char *str);
 
 void    ps_args_check_over_and_underflow(char **args)
 {
@@ -22,13 +22,13 @@ void    ps_args_check_over_and_underflow(char **args)
 	i = 0;
 	while (args[i])
 	{
-		nb = atol(args[i]);
+		nb = ps_atol(args[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
 			ps_error(args);
 	}
 }
 
-static long	atol(char *str)
+static long	ps_atol(char *str)
 {
 	long	nb;
 	int		sign;
