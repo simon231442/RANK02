@@ -21,8 +21,10 @@ void	ps_args_check_non_numeric(char **self)
 	j = 0;
 	while (self[i])
 	{
-		if (self[i][j] != '-' || self[i][j] < '0' || self[i][j] > '9')
+		j = 0;
+		if ((self[i][j] < '0' || self[i][j] > '9') && self[i][j] != '-')
 			ps_error(self);
+		j++;
 		while (self[i][j])
 		{
 			if (self[i][j] < '0' || self[i][j] > '9')

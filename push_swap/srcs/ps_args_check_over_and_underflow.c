@@ -25,6 +25,7 @@ void    ps_args_check_over_and_underflow(char **self)
 		nb = ps_atol(self[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
 			ps_error(self);
+		i++;
 	}
 }
 
