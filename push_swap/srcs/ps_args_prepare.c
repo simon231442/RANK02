@@ -23,14 +23,11 @@ char	**ps_args_prepare(int ac, char **av)
 	args = NULL;
 	if (ac == 2)
 	{
-		while (av[1][i])
-		{
-			i++;
-			if(av[1][i] == ' ')
-				args = ft_split(av[1], ' ');
-		}
+		args = ft_split(av[1], ' ');
+		if (!args)
+			ps_error(args);
 	}
-	if (!args)
+	else
 	{
 		args = malloc(sizeof(char *) * ac);
 		if (!args)
@@ -43,7 +40,6 @@ char	**ps_args_prepare(int ac, char **av)
 			i++;
 		}
 	}
-
 	ps_args_check_all(ac, args);
 	return (args);
 }
@@ -51,7 +47,7 @@ char	**ps_args_prepare(int ac, char **av)
 static void	ps_args_check_all(int ac, char **self)
 {
 	ft_printf("no arg :		 ");
-	ps_args_check_no_arg(ac);
+	ps_args_check_no_arg(ac, self);
 	ft_printf("ok\nnon numeric :		 ");
 	ps_args_check_non_numeric(self);
 	ft_printf("ok\nover and underflow :	 ");

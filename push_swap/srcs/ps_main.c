@@ -16,7 +16,6 @@ int main(int ac, char **av)
 {
 	char	**args;
 
-	args = NULL;
 	args = ps_args_prepare(ac, av);
 	ft_printf("test ok\n");
 	ps_args_free(args);

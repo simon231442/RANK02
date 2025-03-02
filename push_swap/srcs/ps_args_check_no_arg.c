@@ -12,8 +12,18 @@
 
 #include "push_swap.h"
 
-void	ps_args_check_no_arg(int ac)
+void	ps_args_check_no_arg(int ac, char **self)
 {
+    int i;
+
     if (ac == 1)
         ps_error(NULL);
+    i = 0;
+    while (self[i])
+        i++;
+    if (i == 1)
+    {
+        free(self);
+        exit(EXIT_SUCCESS);
+    }
 }

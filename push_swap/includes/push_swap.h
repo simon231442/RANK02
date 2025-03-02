@@ -24,7 +24,7 @@
 # define INT_MIN -2147483648
 
 char	**ps_args_prepare(int ac, char **self);
-void	ps_args_check_no_arg(int ac);
+void	ps_args_check_no_arg(int ac, char **self);
 void	ps_args_check_non_numeric(char **self);
 void	ps_args_check_over_and_underflow(char **self);
 void    ps_args_free(char **self);
