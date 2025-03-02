@@ -14,17 +14,17 @@
 
 static long	ps_atol(char *str);
 
-void    ps_args_check_over_and_underflow(char **args)
+void    ps_args_check_over_and_underflow(char **self)
 {
-    int 	i;
+	int 	i;
 	long	nb;
 
 	i = 0;
-	while (args[i])
+	while (self[i])
 	{
-		nb = ps_atol(args[i]);
+		nb = ps_atol(self[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
-			ps_error(args);
+			ps_error(self);
 	}
 }
 

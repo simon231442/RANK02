@@ -12,21 +12,21 @@
 
 #include "push_swap.h"
 
-void	ps_args_check_non_numeric(char **args)
+void	ps_args_check_non_numeric(char **self)
 {
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
-	while (args[i])
+	while (self[i])
 	{
-		if (args[i][j] != '-' || args[i][j] < '0' || args[i][j] > '9')
-			ps_error(args);
-		while (args[i][j])
+		if (self[i][j] != '-' || self[i][j] < '0' || self[i][j] > '9')
+			ps_error(self);
+		while (self[i][j])
 		{
-			if (args[i][j] < '0' || args[i][j] > '9')
-			ps_error(args);
+			if (self[i][j] < '0' || self[i][j] > '9')
+				ps_error(self);
 			j++;
 		}
 		i++;

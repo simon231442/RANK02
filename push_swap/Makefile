@@ -1,3 +1,5 @@
+.DEFAULT_GOAL=all
+
 NAME = push_swap
 
 CC = cc
@@ -5,6 +7,7 @@ CC = cc
 CFLAGS += -Wall
 CFLAGS += -Wextra
 CFLAGS += -Werror
+CFLAGS += -g
 
 CPPFLAGS += -I includes
 CPPFLAGS += -I srcs/libft
@@ -14,9 +17,10 @@ SRCS += srcs/ps_args_prepare.c
 SRCS += srcs/ps_args_check_no_arg.c
 SRCS += srcs/ps_args_check_non_numeric.c
 SRCS += srcs/ps_args_check_over_and_underflow.c
+SRCS += srcs/ps_args_free.c
 SRCS += srcs/ps_error.c
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:%.c=%.o)
 
 LIBFT_DIR = srcs/libft
 LIBFT = $(LIBFT_DIR)/libft.a
@@ -24,11 +28,12 @@ LIBFT = $(LIBFT_DIR)/libft.a
 $(LIBFT):
 	make -C $(LIBFT_DIR)
 
-%.o: %.c
+$(OBJS):%.o: %.c includes/push_swap.h
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
 .PHONY: all
 all: $(NAME)
+
 $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -o $(NAME) $(OBJS) -L$(LIBFT_DIR) -lft
 

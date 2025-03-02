@@ -22,11 +22,11 @@
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
 
-char	**ps_args_prepare(int ac, char **av);
-void	ps_args_check_no_arg(int ac, char **args);
-void	ps_args_check_non_numeric(char **args);
-void	ps_args_check_over_and_underflow(char **args);
-void    ps_args_free(char **args);
+char	**ps_args_prepare(int ac, char **self);
+void	ps_args_check_no_arg(int ac, char **self);
+void	ps_args_check_non_numeric(char **self);
+void	ps_args_check_over_and_underflow(char **self);
+void    ps_args_free(char **self);
 void	ps_error(char **args);
 
 #endif

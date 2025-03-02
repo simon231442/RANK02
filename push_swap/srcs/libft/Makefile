@@ -5,7 +5,7 @@ NAME = libft.a
 CC = gcc
 
 # Compilations Flags
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 # Flags for pre processor things like #include, #define and so on...
 CPPFLAGS = -I.

@@ -12,8 +12,8 @@
 
 #include "push_swap.h"
 
-void	ps_args_check_no_arg(int ac, char **args)
+void	ps_args_check_no_arg(int ac, char **self)
 {
     if (ac == 1)
-        ps_error(args);
+        ps_error(self);
 }

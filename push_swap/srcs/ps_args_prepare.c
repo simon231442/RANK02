@@ -6,13 +6,13 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 09:37:40 by srenaud           #+#    #+#             */
-/*   Updated: 2025/02/28 09:37:40 by srenaud          ###   ########.ch       */
+/*   Updated: 2025/03/02 14:59:59 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	ps_args_check_all(int ac, char **args);
+static void	ps_args_check_all(int ac, char **self);
 
 char	**ps_args_prepare(int ac, char **av)
 {
@@ -20,6 +20,7 @@ char	**ps_args_prepare(int ac, char **av)
 	char **args;
 
 	i = 0;
+	args = NULL;
 	if (ac == 2)
 	{
 		while (av[1][i])
@@ -48,9 +49,9 @@ char	**ps_args_prepare(int ac, char **av)
 	return (args);
 }
 
-static void	ps_args_check_all(int ac, char **args)
+static void	ps_args_check_all(int ac, char **self)
 {
-	ps_args_check_no_arg(ac, args);
-	ps_args_check_non_numeric(args);
-	ps_args_check_over_and_underflow(args);
+	ps_args_check_no_arg(ac, self);
+	ps_args_check_non_numeric(self);
+	ps_args_check_over_and_underflow(self);
 }
