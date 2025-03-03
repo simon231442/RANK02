@@ -14,9 +14,9 @@
 
 static long	ps_atol(char *str);
 
-void    ps_args_check_over_and_underflow(char **self)
+void	ps_args_check_over_and_underflow(char **self)
 {
-	int 	i;
+	int		i;
 	long	nb;
 
 	i = 0;

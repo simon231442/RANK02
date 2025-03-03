@@ -12,47 +12,49 @@
 
 #include "push_swap.h"
 
+static char	**ps_args_copy(int ac, char **av);
+
 static void	ps_args_check_all(int ac, char **self);
 
 char	**ps_args_prepare(int ac, char **av)
 {
-	int	i;
-	char **args;
+	char	**self;
 
-	i = 0;
-	args = NULL;
 	if (ac == 2)
 	{
-		args = ft_split(av[1], ' ');
-		if (!args)
-			ps_error(args);
+		self = ft_split(av[1], ' ');
+		if (!self)
+			ps_error(self);
 	}
 	else
+		self = ps_args_copy(ac, av);
+	ps_args_check_all(ac, self);
+	return (self);
+}
+
+static char	**ps_args_copy(int ac, char **av)
+{
+	char	**self;
+	int		i;
+
+	i = 0;
+	self = malloc(sizeof(char *) * ac);
+	if (!self)
+		ps_error(self);
+	while (av[i + 1])
 	{
-		args = malloc(sizeof(char *) * ac);
-		if (!args)
-			ps_error(args);
-		while (av[i + 1])
-		{
-			args[i] = ft_strdup(av[i + 1]);
-			if (!args[i])
-				ps_error(args);
-			i++;
-		}
+		self[i] = ft_strdup(av[i + 1]);
+		if (!self[i])
+			ps_error(self);
+		i++;
 	}
-	ps_args_check_all(ac, args);
-	return (args);
+	return (self);
 }
 
 static void	ps_args_check_all(int ac, char **self)
 {
-	//ft_printf("no arg :		 ");
 	ps_args_check_no_arg(ac, self);
-	//ft_printf("ok\nnon numeric :		 ");
 	ps_args_check_non_numeric(self);
-	//ft_printf("ok\nover and underflow :	 ");
 	ps_args_check_over_and_underflow(self);
-	ft_printf("ok\nduplicate :		 ");
 	ps_args_check_duplicate(self);
-	ft_printf("ok\n");
 }

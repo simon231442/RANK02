@@ -18,7 +18,6 @@ void	ps_args_check_non_numeric(char **self)
 	int	j;
 
 	i = 0;
-	j = 0;
 	while (self[i])
 	{
 		j = 0;

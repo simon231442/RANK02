@@ -14,16 +14,16 @@
 
 void	ps_args_check_no_arg(int ac, char **self)
 {
-    int i;
+	int	i;
 
-    if (ac == 1)
-        ps_error(NULL);
-    i = 0;
-    while (self[i])
-        i++;
-    if (i == 1)
-    {
-        free(self);
-        exit(EXIT_SUCCESS);
-    }
+	if (ac == 1)
+		ps_error(NULL);
+	i = 0;
+	while (self[i])
+		i++;
+	if (i == 1)
+	{
+		free(self);
+		exit(EXIT_SUCCESS);
+	}
 }

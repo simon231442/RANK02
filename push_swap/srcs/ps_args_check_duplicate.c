@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "push_swap.h"
 
 static void	ps_args_cmp(const char *s1, const char *s2, char **self)
 {
@@ -23,26 +23,20 @@ static void	ps_args_cmp(const char *s1, const char *s2, char **self)
 		ps_error(self);
 }
 
-
 void	ps_args_check_duplicate(char **self)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	j = 0;
 	while (self[i])
 	{
+		j = i + 1;
 		while (self[j])
 		{
-			if (i == j)
-				;
-			else 
-				ps_args_cmp(self[i], self[j], self);
+			ps_args_cmp(self[i], self[j], self);
 			j++;
 		}
 		i++;
 	}
 }
-
-
