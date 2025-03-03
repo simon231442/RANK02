@@ -17,6 +17,7 @@ SRCS += srcs/ps_args_prepare.c
 SRCS += srcs/ps_args_check_no_arg.c
 SRCS += srcs/ps_args_check_non_numeric.c
 SRCS += srcs/ps_args_check_over_and_underflow.c
+SRCS += srcs/ps_args_check_duplicate.c
 SRCS += srcs/ps_args_free.c
 SRCS += srcs/ps_error.c
 
