@@ -1,35 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_main.c                                          :+:      :+:    :+:   */
+/*   ps_args_int_sort.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 15:43:55 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/02 15:27:22 by srenaud          ###   ########.fr       */
+/*   Created: 2025/03/03 09:42:22 by srenaud           #+#    #+#             */
+/*   Updated: 2025/03/03 09:42:22 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+static void	ps_int_swap(int *n1, int *n2);
+
+void	ps_args_int_sort(int *self, int len)
 {
-	char	**args;
-	int	arg_desorder[ac - 1];
-	int	arg_sorted[ac - 1];
+	int	i;
+	int	j;
 
-	int i; //debug
-	i = 0; //
-
-	args = ps_args_prepare(ac, av);
-	ps_args_to_int_tab(args, arg_desorder);
-	ps_args_to_int_tab(args, arg_sorted);
-	ps_args_free(args);
-		ps_args_int_sort(arg_sorted, ac - 1);
-	while (i < ac - 1)
+	i = 0;
+	j = i + 1;
+	while (j < len)
 	{
-		ft_printf("%d\n", arg_sorted[i]);
-		i++;
+		if (self[i] > self[j])
+		{
+			ps_int_swap(&self[i], &self[j]);
+			i = 0;
+			j = i + 1;
+		}
+		else
+		{
+			i++;
+			j++;
+		}
 	}
-	return (0);
 }
+
+static void	ps_int_swap(int *n1, int *n2)
+{
+	int	tmp;
+
+	tmp = *n1;
+	*n1 = *n2;
+	*n2 = tmp;
+}
+

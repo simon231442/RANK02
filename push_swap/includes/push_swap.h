@@ -23,11 +23,20 @@
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
 
+typedef struct	s_stack
+{
+	int		position;
+
+	struct s_stack	*next;
+}	t_stack;
+
 char	**ps_args_prepare(int ac, char **self);
 void	ps_args_check_no_arg(int ac, char **self);
 void	ps_args_check_non_numeric(char **self);
 void	ps_args_check_over_and_underflow(char **self);
 void	ps_args_check_duplicate(char **self);
+void    ps_args_to_int_tab(char **args, int *args_int);
+void    ps_args_int_sort(int *self, int len);
 void    ps_args_free(char **self);
 void	ps_error(char **args);
 

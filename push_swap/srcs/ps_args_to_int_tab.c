@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_main.c                                          :+:      :+:    :+:   */
+/*   ps_args_to_int_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 15:43:55 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/02 15:27:22 by srenaud          ###   ########.fr       */
+/*   Created: 2025/03/03 08:42:54 by srenaud           #+#    #+#             */
+/*   Updated: 2025/03/03 08:42:54 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void	ps_args_to_int_tab(char **args, int *args_int)
 {
-	char	**args;
-	int	arg_desorder[ac - 1];
-	int	arg_sorted[ac - 1];
+	int	i;
 
-	int i; //debug
-	i = 0; //
-
-	args = ps_args_prepare(ac, av);
-	ps_args_to_int_tab(args, arg_desorder);
-	ps_args_to_int_tab(args, arg_sorted);
-	ps_args_free(args);
-		ps_args_int_sort(arg_sorted, ac - 1);
-	while (i < ac - 1)
+	i = 0;
+	while (args[i])
 	{
-		ft_printf("%d\n", arg_sorted[i]);
+		args_int[i] = ft_atoi((char *)args[i]);
 		i++;
 	}
-	return (0);
 }
+
