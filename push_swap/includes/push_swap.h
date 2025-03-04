@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 14:12:32 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/04 11:34:43 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/04 13:11:48 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	ps_args_check_no_arg(int ac, char **self);
 void	ps_args_check_non_numeric(char **self);
 void	ps_args_check_over_and_underflow(char **self);
 void	ps_args_check_duplicate(char **self);
+int     ps_args_count(char **self);
 void    ps_args_to_int_tab(char **args, int *args_int);
 void    ps_args_int_sort(int *self, int len);
 void    ps_args_free(char **self);
