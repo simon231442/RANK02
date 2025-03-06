@@ -12,14 +12,21 @@
 
 #include "push_swap.h"
 
-void	ps_args_to_int_tab(char **args, int *args_int)
+void	ps_args_to_int_tab(t_args *self)
 {
 	int	i;
 
+	self->int_desorder = malloc(sizeof(int) * self->len);
+	if (!self->int_desorder)
+		ps_error(self);
+	self->int_sorted = malloc(sizeof(int) * self->len);
+	if (!self->int_sorted)
+		ps_error(self);
 	i = 0;
-	while (args[i])
+	while (self->s_char[i])
 	{
-		args_int[i] = ft_atoi(args[i]);
+		self->int_desorder[i] = ft_atoi(self->s_char[i]);
+		self->int_sorted[i] = self->int_desorder[i];
 		i++;
 	}
 }

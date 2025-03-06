@@ -13,6 +13,7 @@ CPPFLAGS += -I includes
 CPPFLAGS += -I srcs/libft
 
 SRCS += srcs/ps_main.c
+SRCS += srcs/ps_args_struct_init.c
 SRCS += srcs/ps_args_prepare.c
 SRCS += srcs/ps_args_check_no_arg.c
 SRCS += srcs/ps_args_check_non_numeric.c

@@ -12,7 +12,27 @@
 
 #include "push_swap.h"
 
-static void	ps_args_cmp(const char *s1, const char *s2, char **self)
+static void	ps_args_cmp(const char *s1, const char *s2, t_args *self);
+
+void	ps_args_check_duplicate(t_args *self)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (self->s_char[i])
+	{
+		j = i + 1;
+		while (self->s_char[j])
+		{
+			ps_args_cmp(self->s_char[i], self->s_char[j], self);
+			j++;
+		}
+		i++;
+	}
+}
+
+static void	ps_args_cmp(const char *s1, const char *s2, t_args *self)
 {
 	while (*s1 == *s2 && *s1)
 	{
@@ -21,22 +41,4 @@ static void	ps_args_cmp(const char *s1, const char *s2, char **self)
 	}
 	if (*s1 == '\0' && *s2 == '\0')
 		ps_error(self);
-}
-
-void	ps_args_check_duplicate(char **self)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (self[i])
-	{
-		j = i + 1;
-		while (self[j])
-		{
-			ps_args_cmp(self[i], self[j], self);
-			j++;
-		}
-		i++;
-	}
 }

@@ -30,16 +30,27 @@ typedef struct	s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-char	**ps_args_prepare(int ac, char **self);
-void	ps_args_check_no_arg(int ac, char **self);
-void	ps_args_check_non_numeric(char **self);
-void	ps_args_check_over_and_underflow(char **self);
-void	ps_args_check_duplicate(char **self);
-int     ps_args_count(char **self);
-void    ps_args_to_int_tab(char **args, int *args_int);
-void    ps_args_int_sort(int *self, int len);
-void    ps_args_free(char **self);
-t_stack *ps_stack_a_create(int *arg_disorder, int *arg_sorted, int len);
-void	ps_error(char **args);
+typedef struct	s_args
+{
+	char	**s_char;
+	int		len;
+	int		*int_desorder;
+	int		*int_sorted;
+	t_stack	*stack_a;
+	t_stack *stack_b;
+}	t_args;
+
+t_args  *ps_args_struct_init(void);
+void	ps_args_prepare(int ac, char **av, t_args *self);
+void	ps_args_check_no_arg(int ac, t_args *self);
+void	ps_args_check_non_numeric(t_args *self);
+void	ps_args_check_over_and_underflow(t_args *self);
+void	ps_args_check_duplicate(t_args *self);
+void    ps_args_count(t_args *self);
+void	ps_args_to_int_tab(t_args *self);
+void	ps_args_int_sort(t_args *self);
+void    ps_args_free(t_args *self);
+void    ps_stack_a_create(t_args *args);
+void	ps_error(t_args *args);
 
 #endif

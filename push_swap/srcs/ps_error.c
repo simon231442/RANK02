@@ -12,11 +12,9 @@
 
 #include "push_swap.h"
 
-void	ps_error(char **args)
+void	ps_error(t_args *args)
 {
 	ft_putstr_fd("Error\n", 2);
-	if (args == NULL)
-		exit(EXIT_FAILURE);
 	ps_args_free(args);
 	exit(EXIT_FAILURE);
 }

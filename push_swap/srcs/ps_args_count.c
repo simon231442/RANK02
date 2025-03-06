@@ -12,12 +12,9 @@
 
 #include "push_swap.h"
 
-int	ps_args_count(char **self)
+void	ps_args_count(t_args *self)
 {
-	int	len;
-
-	len = 0;
-	while (self[len])
-		len++;
-	return (len);
+	self->len = 0;
+	while (self->s_char[self->len])
+		self->len++;
 }

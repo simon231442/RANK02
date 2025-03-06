@@ -16,23 +16,21 @@ static t_stack	*ps_stack_a_new(int position);
 static int		number_chr(int *arg_disorder, int number);
 static void		ps_stack_a_addback(t_stack **stack_a, t_stack *new);
 
-t_stack	*ps_stack_a_create(int *arg_disorder, int *arg_sorted, int len)
+void	ps_stack_a_create(t_args *args)
 {
-	t_stack		*stack_a;
 	t_stack		*ptr;
 	int			i;
 
 	i = 0;
-	stack_a = ps_stack_a_new(number_chr(arg_disorder, arg_sorted[i]));
-	ptr = stack_a;
+	args->stack_a = ps_stack_a_new(number_chr(args->int_desorder, args->int_sorted[i]));
+	ptr = args->stack_a;
 	i++;
-	while (i < len)
+	while (i < args->len)
 	{
-		ptr = ps_stack_a_new(number_chr(arg_disorder, arg_sorted[i]));
-		ps_stack_a_addback(&stack_a, ptr);
+		ptr = ps_stack_a_new(number_chr(args->int_desorder, args->int_sorted[i]));
+		ps_stack_a_addback(&args->stack_a, ptr);
 		i++;
 	}
-	return (stack_a);
 }
 
 t_stack	*ps_stack_a_new(int position)

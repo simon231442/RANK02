@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_main.c                                          :+:      :+:    :+:   */
+/*   ps_args_struct_init.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 15:43:55 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/04 13:25:47 by srenaud          ###   ########.fr       */
+/*   Created: 2025/03/04 15:30:20 by srenaud           #+#    #+#             */
+/*   Updated: 2025/03/04 15:30:20 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+t_args	*ps_args_struct_init(void)
 {
 	t_args	*args;
 	
-	args = ps_args_struct_init();
-	ps_args_prepare(ac, av, args);
-	ps_args_count(args);
-	ps_args_to_int_tab(args);
-	ps_args_int_sort(args);
-	ps_stack_a_create(args);
-	
-		ft_printf("stack a\n");
-	while (args->stack_a)
+	args = malloc(sizeof(t_args));
+	if (!args)
 	{
-		ft_printf("%d\n", args->stack_a->position);
-		args->stack_a = args->stack_a->next;
+		ft_putstr_fd("Error\n", 2);
+		exit(EXIT_FAILURE);
 	}
-	return (0);
+	args->s_char = NULL;
+	args->int_desorder = NULL;
+	args->int_sorted= NULL;
+	args->stack_a = NULL;
+	args->stack_b = NULL;
+	return (args);
 }
+	

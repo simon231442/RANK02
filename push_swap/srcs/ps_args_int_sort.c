@@ -14,18 +14,18 @@
 
 static void	ps_int_swap(int *n1, int *n2);
 
-void	ps_args_int_sort(int *self, int len)
+void	ps_args_int_sort(t_args *self)
 {
 	int	i;
 	int	j;
 
 	i = 0;
 	j = i + 1;
-	while (j < len)
+	while (j < self->len)
 	{
-		if (self[i] > self[j])
+		if (self->int_sorted[i] > self->int_sorted[j])
 		{
-			ps_int_swap(&self[i], &self[j]);
+			ps_int_swap(&self->int_sorted[i], &self->int_sorted[j]);
 			i = 0;
 			j = i + 1;
 		}

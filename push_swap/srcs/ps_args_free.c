@@ -12,18 +12,26 @@
 
 #include "push_swap.h"
 
-void    ps_args_free(char **self)
+void    ps_args_free(t_args *self)
 {
-	int i;
+	int 	i;
+	t_stack	ptr;
 
 	i = 0;
-	if (self != NULL)
+	if (self->s_char)
 	{
-		while (self[i])
+		while (self->s_char[i])
 		{
-			free(self[i]);
+			free(self->s_char[i]);
 			i++;
 		}
-		free(self);
+		free(self->s_char);
 	}
+	if (self->int_desorder)
+		free(self->int_desorder);
+	if (self->int_sorted)
+		free(self->int_sorted);
+	if (self->stack_a)
+		{
+
 }
