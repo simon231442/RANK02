@@ -34,7 +34,7 @@ static void	ps_args_copy(int ac, char **av, t_args *self)
 	int		i;
 
 	i = 0;
-	self->s_char = malloc(sizeof(char *) * ac);
+	self->s_char = ft_calloc(sizeof(char *), ac);
 	if (!self->s_char)
 		ps_error(self);
 	while (av[i + 1])

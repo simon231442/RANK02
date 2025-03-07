@@ -23,11 +23,15 @@ void	ps_stack_a_create(t_args *args)
 
 	i = 0;
 	args->stack_a = ps_stack_a_new(number_chr(args->int_desorder, args->int_sorted[i]));
+	if (!args->stack_a)
+		ps_error(args);
 	ptr = args->stack_a;
 	i++;
 	while (i < args->len)
 	{
-		ptr = ps_stack_a_new(number_chr(args->int_desorder, args->int_sorted[i]));
+		ptr= ps_stack_a_new(number_chr(args->int_desorder, args->int_sorted[i]));
+		if (!ptr)
+			ps_error(args);
 		ps_stack_a_addback(&args->stack_a, ptr);
 		i++;
 	}
@@ -37,7 +41,7 @@ t_stack	*ps_stack_a_new(int position)
 {
 	t_stack	*new;
 
-	new = malloc(sizeof(t_stack));
+	new = calloc(sizeof(t_stack),1);
 	if (!new)
 		return (NULL);
 	new->position = position;

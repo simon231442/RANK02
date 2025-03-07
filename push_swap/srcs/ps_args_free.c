@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 11:42:16 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/02 15:02:03 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/06 23:44:30 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void    ps_args_free(t_args *self)
 {
 	int 	i;
-	t_stack	ptr;
+	t_stack	*ptr;
 
 	i = 0;
 	if (self->s_char)
@@ -32,6 +32,14 @@ void    ps_args_free(t_args *self)
 	if (self->int_sorted)
 		free(self->int_sorted);
 	if (self->stack_a)
-		{
-
+	{
+		ptr = self->stack_a;
+		while (ptr)
+		{ 
+			self->stack_a = self->stack_a->next;
+			free(ptr);
+			ptr = self->stack_a;
+		}
+	}
+	free(self);
 }
