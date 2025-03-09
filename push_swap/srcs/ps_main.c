@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 15:43:55 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/09 17:35:20 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/09 19:11:09 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int ac, char **av)
 			ft_printf("\n");
 	}
 	ft_printf("\n");
-	ps_stack_move_ra(&args->stack_a);
+	ps_stack_move_utils_reverse_rotate(&args->stack_a);
 	ptr_a = args->stack_a;
 	ptr_b = args->stack_b;
 	ft_printf("stack a		stack b\n");
