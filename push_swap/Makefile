@@ -35,7 +35,11 @@ SRCS += srcs/ps_stack_move_pb.c
 SRCS += srcs/ps_stack_move_utils_rotate.c
 SRCS += srcs/ps_stack_move_ra.c
 SRCS += srcs/ps_stack_move_rb.c
+SRCS += srcs/ps_stack_move_rr.c
 SRCS += srcs/ps_stack_move_utils_reverse_rotate.c
+SRCS += srcs/ps_stack_move_rra.c
+SRCS += srcs/ps_stack_move_rrr.c
+SRCS += srcs/ps_stack_move_rrb.c
 
 OBJS = $(SRCS:%.c=%.o)
 

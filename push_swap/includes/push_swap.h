@@ -62,6 +62,11 @@ void    ps_stack_move_pb(t_stack **stack_a, t_stack **stack_b);
 void    ps_stack_move_utils_rotate(t_stack **stack);
 void    ps_stack_move_ra(t_stack **stack_a);
 void    ps_stack_move_rb(t_stack **stack_b);
+void    ps_stack_move_rr(t_stack **stack_a, t_stack **stack_b);
 void    ps_stack_move_utils_reverse_rotate(t_stack **stack);
+void    ps_stack_move_rra(t_stack **stack_a);
+void    ps_stack_move_rrb(t_stack **stack_b);
+void    ps_stack_move_rrr(t_stack **stack_a, t_stack **stack_b);
+
 
 #endif

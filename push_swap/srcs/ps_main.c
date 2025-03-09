@@ -17,6 +17,7 @@ int	main(int ac, char **av)
 	t_args	*args;
 	t_stack	*ptr_a;	//test
 	t_stack	*ptr_b;	//test
+	int		i = 0; 		//test
 	
 	args = ps_args_struct_init();
 	ps_args_prepare(ac, av, args);
@@ -24,6 +25,41 @@ int	main(int ac, char **av)
 	ps_args_to_int_tab(args);
 	ps_args_int_sort(args);
 	ps_stack_a_create(args);
+/*
+	ptr_a = args->stack_a;
+	ptr_b = args->stack_b;
+	ft_printf("stack a		stack b\n");
+	while (ptr_a)
+	{
+		ft_printf("%d", ptr_a->position);
+		ptr_a = ptr_a->next;
+		if (ptr_b)
+		{
+			ft_printf("		%d\n", ptr_b->position);
+			ptr_b = ptr_b->next;
+		}
+		else
+			ft_printf("\n");
+	}
+	ft_printf("\n");
+
+	while(i < 5)
+	{
+		ps_stack_move_pb(&args->stack_a, &args->stack_b);
+		i++;
+	}
+
+	//ps_stack_move_sa(&args->stack_a);
+	//ps_stack_move_sb(&args->stack_b);
+
+	i = 0;
+	while (i < 3)
+	{
+		ps_stack_move_rr(&args->stack_a, &args->stack_b);
+		i++;
+	}
+	//ps_stack_move_utils_reverse_rotate(&args->stack_a);
+
 
 	ptr_a = args->stack_a;
 	ptr_b = args->stack_b;
@@ -41,23 +77,8 @@ int	main(int ac, char **av)
 			ft_printf("\n");
 	}
 	ft_printf("\n");
-	ps_stack_move_utils_reverse_rotate(&args->stack_a);
-	ptr_a = args->stack_a;
-	ptr_b = args->stack_b;
-	ft_printf("stack a		stack b\n");
-	while (ptr_a)
-	{
-		ft_printf("%d", ptr_a->position);
-		ptr_a = ptr_a->next;
-		if (ptr_b)
-		{
-			ft_printf("		%d\n", ptr_b->position);
-			ptr_b = ptr_b->next;
-		}
-		else
-			ft_printf("\n");
-	}
-	ft_printf("\n");
+
+*/
 	ps_args_free(args);
 	return (0);
 }
