@@ -25,6 +25,10 @@ SRCS += srcs/ps_args_int_sort.c
 SRCS += srcs/ps_args_free.c
 SRCS += srcs/ps_stack_a_create.c
 SRCS += srcs/ps_error.c
+SRCS += srcs/ps_stack_move_utils_swap.c
+SRCS += srcs/ps_stack_move_sa.c
+SRCS += srcs/ps_stack_move_sb.c
+SRCS += srcs/ps_stack_move_ss.c
 
 OBJS = $(SRCS:%.c=%.o)
 
