@@ -45,6 +45,7 @@ void	ps_args_check_duplicate(t_args *self);
 void	ps_args_count(t_args *self);
 void	ps_args_to_int_tab(t_args *self);
 void	ps_args_int_sort(t_args *self);
+void    ps_args_check_already_sorted(t_args *self);
 void	ps_args_free(t_args *self);
 void	ps_stack_a_create(t_args *args);
 void	ps_error(t_args *args);

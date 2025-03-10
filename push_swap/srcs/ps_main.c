@@ -22,6 +22,7 @@ int	main(int ac, char **av)
 	ps_args_count(args);
 	ps_args_to_int_tab(args);
 	ps_args_int_sort(args);
+	ps_args_check_already_sorted(args);
 	ps_stack_a_create(args);
 /*
 	ps_stack_utils_display(args->stack_a, args->stack_b);
