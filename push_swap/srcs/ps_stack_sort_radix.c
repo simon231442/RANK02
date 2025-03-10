@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 15:55:04 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/10 15:55:04 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 18:02:16 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,25 @@ static int  ps_get_max_bits(int i_max);
 
 void	ps_stack_sort_radix(t_stack **stack_a, t_stack **stack_b, int len)
 {
-	int	bits;
-	
-	bits = ps_get_max_bits(len -1);
+	int		bits_max;
+	int		bits;
+	int		i;
+
+	bits_max = ps_get_max_bits(len -1);
+	bits = 0;
+	while (bits <= bits_max)
+	{
+		i = 0;
+		while (i < len)
+		{
+			if (stack_a->position >> bits & 1)
+				ps_stack_move_ra(stack_a);
+			else
+				ps_stack_move_pb(stack_a, stack_b);
+			i++;
+		}
+		while (*stack_b)
+			ps_stack_move_pa(stack_a, stack_b);
 }
 
 static int  ps_get_max_bits(int i_max)
