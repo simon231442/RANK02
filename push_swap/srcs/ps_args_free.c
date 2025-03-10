@@ -6,16 +6,17 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 11:42:16 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/06 23:44:30 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 11:58:06 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ps_args_free(t_args *self)
+static void	stack_free(t_args *self);
+
+void	ps_args_free(t_args *self)
 {
-	int 	i;
-	t_stack	*ptr;
+	int		i;
 
 	i = 0;
 	if (self->s_char)
@@ -31,15 +32,32 @@ void    ps_args_free(t_args *self)
 		free(self->int_desorder);
 	if (self->int_sorted)
 		free(self->int_sorted);
+	stack_free(self);
+	free(self);
+}
+
+static void	stack_free(t_args *self)
+{
+	t_stack	*ptr;
+
 	if (self->stack_a)
 	{
 		ptr = self->stack_a;
 		while (ptr)
-		{ 
+		{
 			self->stack_a = self->stack_a->next;
 			free(ptr);
 			ptr = self->stack_a;
 		}
 	}
-	free(self);
+	if (self->stack_b)
+	{
+		ptr = self->stack_b;
+		while (ptr)
+		{
+			self->stack_b = self->stack_b->next;
+			free(ptr);
+			ptr = self->stack_b;
+		}
+	}
 }

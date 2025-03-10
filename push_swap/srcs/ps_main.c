@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 15:43:55 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/09 19:11:09 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 12:01:34 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 int	main(int ac, char **av)
 {
 	t_args	*args;
-	t_stack	*ptr_a;	//test
-	t_stack	*ptr_b;	//test
-	int		i = 0; 		//test
+//	int		i = 0; 		//test
 	
 	args = ps_args_struct_init();
 	ps_args_prepare(ac, av, args);
@@ -26,58 +24,44 @@ int	main(int ac, char **av)
 	ps_args_int_sort(args);
 	ps_stack_a_create(args);
 /*
-	ptr_a = args->stack_a;
-	ptr_b = args->stack_b;
-	ft_printf("stack a		stack b\n");
-	while (ptr_a)
-	{
-		ft_printf("%d", ptr_a->position);
-		ptr_a = ptr_a->next;
-		if (ptr_b)
-		{
-			ft_printf("		%d\n", ptr_b->position);
-			ptr_b = ptr_b->next;
-		}
-		else
-			ft_printf("\n");
-	}
-	ft_printf("\n");
+	ps_stack_utils_display(args->stack_a, args->stack_b);
 
-	while(i < 5)
+	while (i < 5)
 	{
 		ps_stack_move_pb(&args->stack_a, &args->stack_b);
 		i++;
 	}
 
-	//ps_stack_move_sa(&args->stack_a);
-	//ps_stack_move_sb(&args->stack_b);
-
+	ps_stack_utils_display(args->stack_a, args->stack_b);
+	
 	i = 0;
-	while (i < 3)
+	while (i < 1)
 	{
-		ps_stack_move_rr(&args->stack_a, &args->stack_b);
+		ps_stack_move_pa(&args->stack_a, &args->stack_b);
 		i++;
 	}
-	//ps_stack_move_utils_reverse_rotate(&args->stack_a);
+	
+	ps_stack_utils_display(args->stack_a, args->stack_b);
+
+	ps_stack_move_ra(&args->stack_a);
+	ps_stack_move_rb(&args->stack_b);
+
+	ps_stack_utils_display(args->stack_a, args->stack_b);
+
+	ps_stack_move_rrr(&args->stack_a, &args->stack_b);
+
+	ps_stack_utils_display(args->stack_a, args->stack_b);
 
 
-	ptr_a = args->stack_a;
-	ptr_b = args->stack_b;
-	ft_printf("stack a		stack b\n");
-	while (ptr_a)
-	{
-		ft_printf("%d", ptr_a->position);
-		ptr_a = ptr_a->next;
-		if (ptr_b)
-		{
-			ft_printf("		%d\n", ptr_b->position);
-			ptr_b = ptr_b->next;
-		}
-		else
-			ft_printf("\n");
-	}
-	ft_printf("\n");
 
+	ps_stack_move_rra(&args->stack_a);
+	ps_stack_move_rrb(&args->stack_b);
+
+	ps_stack_utils_display(args->stack_a, args->stack_b);
+
+	ps_stack_move_rr(&args->stack_a, &args->stack_b);
+
+	ps_stack_utils_display(args->stack_a, args->stack_b);
 */
 	ps_args_free(args);
 	return (0);

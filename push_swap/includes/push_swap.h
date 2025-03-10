@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 14:12:32 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/09 19:09:12 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 11:07:29 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ void    ps_stack_move_rra(t_stack **stack_a);
 void    ps_stack_move_rrb(t_stack **stack_b);
 void    ps_stack_move_rrr(t_stack **stack_a, t_stack **stack_b);
 
+void	ps_stack_utils_display(t_stack *stack_a, t_stack *stack_b);
 
 #endif

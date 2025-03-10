@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_args_check_no_arg.c                             :+:      :+:    :+:   */
+/*   ps_stack_utils_display.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 23:17:23 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/02 15:33:19 by srenaud          ###   ########.fr       */
+/*   Created: 2025/03/10 10:33:53 by srenaud           #+#    #+#             */
+/*   Updated: 2025/03/10 11:33:54 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_args_check_no_arg(int ac, t_args *self)
+void	ps_stack_utils_display(t_stack *stack_a, t_stack *stack_b)
 {
-	if (ac == 1)
-		ps_error(self);
-/*	if (!self->s_char[1])
+	ft_printf("\nA	B\n\n");
+	while (stack_a)
 	{
-		free(self->s_char[0]);
-		free(self->s_char);
-		exit(EXIT_SUCCESS);
+		ft_printf("%d", stack_a->position);
+		stack_a = stack_a->next;
+		if (stack_b)
+		{
+			ft_printf("	%d\n", stack_b->position);
+			stack_b = stack_b->next;
+		}
+		else
+			ft_printf("\n");
 	}
-*/
+	ft_printf("\n\n");
 }

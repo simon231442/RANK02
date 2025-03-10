@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 09:37:40 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/04 13:22:44 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 12:15:17 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,15 @@
 
 static void	ps_args_copy(int ac, char **av, t_args *self);
 
-static void	ps_args_check_all(int ac, t_args *self);
+static void	ps_args_check_all(t_args *self);
 
-	void	ps_args_prepare(int ac, char **av, t_args *self)
+void	ps_args_prepare(int ac, char **av, t_args *self)
 {
+	if (ac == 1)
+	{
+		free(self);
+		exit(EXIT_SUCCESS);
+	}
 	if (ac == 2)
 	{
 		self->s_char = ft_split(av[1], ' ');
@@ -26,7 +31,7 @@ static void	ps_args_check_all(int ac, t_args *self);
 	}
 	else
 		ps_args_copy(ac, av, self);
-	ps_args_check_all(ac, self);
+	ps_args_check_all(self);
 }
 
 static void	ps_args_copy(int ac, char **av, t_args *self)
@@ -46,9 +51,8 @@ static void	ps_args_copy(int ac, char **av, t_args *self)
 	}
 }
 
-static void	ps_args_check_all(int ac, t_args *self)
+static void	ps_args_check_all(t_args *self)
 {
-	ps_args_check_no_arg(ac, self);
 	ps_args_check_non_numeric(self);
 	ps_args_check_over_and_underflow(self);
 	ps_args_check_duplicate(self);
