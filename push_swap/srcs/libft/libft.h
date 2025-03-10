@@ -28,7 +28,7 @@
 
 // prototypes
 
-int	ft_printf(const char *fmt, ...);
+int		ft_printf(const char *fmt, ...);
 
 void	pf_parser(const char *format, va_list *args, int *len);
 int		ft_printf(const char *format, ...);

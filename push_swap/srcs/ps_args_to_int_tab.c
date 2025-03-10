@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 08:42:54 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/04 12:22:42 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 12:54:16 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ void	ps_args_to_int_tab(t_args *self)
 		i++;
 	}
 }
-

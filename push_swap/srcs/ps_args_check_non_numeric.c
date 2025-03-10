@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 23:11:18 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/07 00:56:02 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 12:41:29 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ps_args_check_non_numeric(t_args *self)
 	while (self->s_char[i])
 	{
 		j = 0;
-		if ((self->s_char[i][j] < '0' || self->s_char[i][j] > '9') 
+		if ((self->s_char[i][j] < '0' || self->s_char[i][j] > '9')
 			&& self->s_char[i][j] != '-')
 			ps_error(self);
 		j++;

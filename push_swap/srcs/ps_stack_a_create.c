@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 18:01:03 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/04 10:49:10 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 13:02:26 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ps_stack_a_create(t_args *args)
 	i++;
 	while (i < args->len)
 	{
-		ptr= ps_stack_a_new(number_chr(args->int_desorder, args->int_sorted[i]));
+		ptr = ps_stack_a_new(number_chr(args->int_desorder, args->int_sorted[i]));
 		if (!ptr)
 			ps_error(args);
 		ps_stack_a_addback(&args->stack_a, ptr);
@@ -41,7 +41,7 @@ t_stack	*ps_stack_a_new(int position)
 {
 	t_stack	*new;
 
-	new = calloc(sizeof(t_stack),1);
+	new = calloc(sizeof(t_stack), 1);
 	if (!new)
 		return (NULL);
 	new->position = position;

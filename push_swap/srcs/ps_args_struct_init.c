@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 15:30:20 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/04 15:30:20 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 12:36:41 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_args	*ps_args_struct_init(void)
 {
 	t_args	*args;
-	
+
 	args = malloc(sizeof(t_args));
 	if (!args)
 	{
@@ -24,9 +24,8 @@ t_args	*ps_args_struct_init(void)
 	}
 	args->s_char = NULL;
 	args->int_desorder = NULL;
-	args->int_sorted= NULL;
+	args->int_sorted = NULL;
 	args->stack_a = NULL;
 	args->stack_b = NULL;
 	return (args);
 }
-	

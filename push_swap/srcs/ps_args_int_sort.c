@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 09:42:22 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/03 09:42:22 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 13:24:08 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,3 @@ static void	ps_int_swap(int *n1, int *n2)
 	*n1 = *n2;
 	*n2 = tmp;
 }
-

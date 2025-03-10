@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 15:19:17 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/08 15:44:09 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/10 13:17:52 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ void	ps_stack_move_utils_swap(t_stack **stack)
 
 	first = *stack;
 	second = (*stack)->next;
-
 	first->next = second->next;
 	second->next = first;
 	*stack = second;
 }
-
