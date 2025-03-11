@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 14:12:32 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/11 11:29:10 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/11 13:50:18 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,5 @@ void	ps_stack_sort_5(t_stack **stack_a, t_stack **stack_b, int i_max);
 void	ps_stack_sort_radix(t_stack **stack_a, t_stack **stack_b, int len);
 
 void	ps_stack_utils_display(t_stack *stack_a, t_stack *stack_b);
-
+void    ps_stack_utils_display_line(t_stack *stack_a);
 #endif
