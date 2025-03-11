@@ -6,12 +6,12 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 20:36:03 by srenaud           #+#    #+#             */
-/*   Updated: 2025/01/22 11:58:20 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/11 08:19:20 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_PRINTF_H
-# define LIBFT_PRINTF_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 // libraries
 # include <unistd.h>

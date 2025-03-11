@@ -46,9 +46,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	while (s1[sub_start + sub_len])
 		sub_len++;
-	sub_len--;
-	while (ft_isset((s1[sub_start + sub_len]), set))
-		sub_len--;
+	while (ft_isset((s1[sub_start + --sub_len]), set))
+		;
 	sub_len++;
 	if (sub_len < 1)
 		return (ft_strdup(""));
