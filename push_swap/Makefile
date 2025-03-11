@@ -40,6 +40,10 @@ SRCS += srcs/ps_stack_move_utils_reverse_rotate.c
 SRCS += srcs/ps_stack_move_rra.c
 SRCS += srcs/ps_stack_move_rrr.c
 SRCS += srcs/ps_stack_move_rrb.c
+SRCS += srcs/ps_stack_sort.c
+SRCS += srcs/ps_stack_sort_3.c
+SRCS += srcs/ps_stack_sort_4.c
+SRCS += srcs/ps_stack_sort_5.c
 SRCS += srcs/ps_stack_sort_radix.c
 
 SRCS += srcs/ps_stack_utils_display.c

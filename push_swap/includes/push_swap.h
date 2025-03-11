@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 14:12:32 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/11 07:59:39 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/11 11:29:10 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,10 @@ void	ps_stack_move_utils_reverse_rotate(t_stack **stack);
 void	ps_stack_move_rra(t_stack **stack_a);
 void	ps_stack_move_rrb(t_stack **stack_b);
 void	ps_stack_move_rrr(t_stack **stack_a, t_stack **stack_b);
+void	ps_stack_sort(t_args *args);
+void	ps_stack_sort_3(t_stack **stack_a);
+void	ps_stack_sort_4(t_stack **stack_a, t_stack **stack_b);
+void	ps_stack_sort_5(t_stack **stack_a, t_stack **stack_b, int i_max);
 void	ps_stack_sort_radix(t_stack **stack_a, t_stack **stack_b, int len);
 
 void	ps_stack_utils_display(t_stack *stack_a, t_stack *stack_b);

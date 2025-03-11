@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 15:43:55 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/11 08:18:05 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/11 12:07:15 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int	main(int ac, char **av)
 	ps_args_int_sort(args);
 	ps_args_check_already_sorted(args);
 	ps_stack_a_create(args);
-	ps_stack_sort_radix(&args->stack_a, &args->stack_b, args->len);
-/*
-	ps_stack_utils_display(args->stack_a, args->stack_b);
+	ps_stack_sort(args);
 
+	ps_stack_utils_display(args->stack_a, args->stack_b);
+/*
 	while (i < 5)
 	{
 		ps_stack_move_pb(&args->stack_a, &args->stack_b);
