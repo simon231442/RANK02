@@ -15,6 +15,7 @@
 
 # include "libft.h"
 # include <stdlib.h>
+# include <stdio.h>
 
 # define EXIT_FAILURE 1
 # define EXIT_SUCCESS 0
@@ -70,6 +71,8 @@ void	ps_stack_sort_4(t_stack **stack_a, t_stack **stack_b);
 void	ps_stack_sort_5(t_stack **stack_a, t_stack **stack_b, int i_max);
 void	ps_stack_sort_radix(t_stack **stack_a, t_stack **stack_b, int len);
 
+void	ps_args_int_utils_display(int *self, int len);
 void	ps_stack_utils_display(t_stack *stack_a, t_stack *stack_b);
 void	ps_stack_utils_display_line(t_stack *stack_a);
+
 #endif

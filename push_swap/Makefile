@@ -48,6 +48,7 @@ SRCS += srcs/ps_stack_sort_radix.c
 
 SRCS += srcs/ps_stack_utils_display.c
 SRCS += srcs/ps_stack_utils_display_line.c
+SRCS += srcs/ps_args_int_utils_display.c
 
 OBJS = $(SRCS:%.c=%.o)
 

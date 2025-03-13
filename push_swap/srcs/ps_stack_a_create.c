@@ -13,7 +13,8 @@
 #include "push_swap.h"
 
 static t_stack	*ps_stack_a_new(int position);
-static int		number_chr(int *arg_disorder, int number);
+static int	ps_get_position(int	*arg_desorer, int index, int len);
+//static int		number_chr(int *arg_disorder, int number);
 static void		ps_stack_a_addback(t_stack **stack_a, t_stack *new);
 
 void	ps_stack_a_create(t_args *args)
@@ -23,7 +24,7 @@ void	ps_stack_a_create(t_args *args)
 	int			position;
 
 	i = 0;
-	position = number_chr(args->int_desorder, args->int_sorted[i]);
+	position = ps_get_position(args->int_desorder, i, args->len);
 	args->stack_a = ps_stack_a_new(position);
 	if (!args->stack_a)
 		ps_error(args);
@@ -31,7 +32,7 @@ void	ps_stack_a_create(t_args *args)
 	i++;
 	while (i < args->len)
 	{
-		position = number_chr(args->int_desorder, args->int_sorted[i]);
+		position = ps_get_position(args->int_desorder, i, args->len);
 		ptr = ps_stack_a_new(position);
 		if (!ptr)
 			ps_error(args);
@@ -52,6 +53,22 @@ t_stack	*ps_stack_a_new(int position)
 	return (new);
 }
 
+static int	ps_get_position(int	*arg_desorer, int index, int len)
+{
+	int	i;
+	int position;
+
+	i = 0;
+	position = 0;
+	while (i < len)
+	{
+		if (arg_desorer[index] > arg_desorer[i])
+			position++;
+		i++;
+	}
+	return(position);
+}
+/*
 static int	number_chr(int *arg_disorder, int number)
 {
 	int	i;
@@ -61,7 +78,7 @@ static int	number_chr(int *arg_disorder, int number)
 		i++;
 	return (i);
 }
-
+*/
 void	ps_stack_a_addback(t_stack **stack_a, t_stack *new)
 {
 	t_stack	*tmp;

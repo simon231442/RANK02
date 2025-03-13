@@ -21,9 +21,15 @@ int	main(int ac, char **av)
 	ps_args_count(args);
 	ps_args_to_int_tab(args);
 	ps_args_int_sort(args);
+	ft_printf("Desorder: \n");
+	ps_args_int_utils_display(args->int_desorder, args->len);
+	ft_printf("sorted: \n");
+	ps_args_int_utils_display(args->int_sorted, args->len);
 	ps_args_check_already_sorted(args);
 	ps_stack_a_create(args);
-	ps_stack_sort(args);
+	ft_printf("stack: \n");
+	ps_stack_utils_display_line(args->stack_a);
+//	ps_stack_sort(args);
 	ps_args_free(args);
 	return (0);
 }
