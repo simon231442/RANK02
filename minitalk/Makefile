@@ -18,20 +18,20 @@ LIBFT = $(LIBFT_DIR)/libft.a
 ################################################################################
 NAME_SERV = $(BIN_DIR)/server
 
-FILE_SERV = $(SRC_DIR)/server/server.c \
+SRC_SERV = $(SRC_DIR)/server/server.c \
 
-SRC_SERV = $(FILE_SERV)
-OBJ_S = $(SRC_SERV:$(SRC_DIR)/%.c=$(OBJ_SERV)/%.o)
+OBJ_DIR_SERV = $(OBJ_DIR)/server
+PATTERN_OBJ_SERV = $(SRC_SERV:$(SRC_DIR)/server%.c=$(OBJ_DIR_SERV)/%.o)
 
 ################################################################################
 #                                 CLIENT                                       #
 ################################################################################
 NAME_CLIENT = $(BIN_DIR)/client
 
-FILE_CLIENT = $(SRC_DIR)/client/client.c \
+SRC_CLIENT = $(SRC_DIR)/client/client.c \
 
-SRC_CLIENT = $(FILE_CLIENT)
-OBJ_C = $(SRC_CLIENT:$(SRC_CLIENT)/%.c=$(OBJ_CLIENT)/%.o)
+OBJ_DIR_CLIENT = $(OBJ_DIR)/client
+PATTERN_OBJ_CLIENT = $(SRC_CLIENT:$(SRC_DIR)/client%.c=$(OBJ_DIR_CLIENT)/%.o)
 
 ################################################################################
 #                             COMPILER OPTIONS                                 #
@@ -57,22 +57,22 @@ $(LIBFT):
 	@$(MAKE) --no-print-directory -C $(LIBFT_DIR)
 	@echo "libft ready"
 
-$(NAME_SERV): $(LIBFT) $(OBJ_SERV)
-	@$(CC) $(OBJ_S) $(LIB) -o $(NAME_SERV)
+$(NAME_SERV): $(LIBFT) $(PATTERN_OBJ_SERV)
+	@$(CC) $(PATTERN_OBJ_SERV) $(LIB) -o $(NAME_SERV)
 	@echo "server binary created : run with ./bin/server"
 
-$(NAME_CLIENT): $(LIBFT) $(OBJ_CLIENT)
-	@$(CC) $(OBJ_C) $(LIB) -o $(NAME_CLIENT)
+$(NAME_CLIENT): $(LIBFT) $(PATTERN_OBJ_CLIENT)
+	@$(CC) $(PATTERN_OBJ_CLIENT) $(LIB) -o $(NAME_CLIENT)
 	@echo "client binary created : run with ./bin/client"
 
 ################################################################################
 #                               OBJS & RULES                                   #
 ################################################################################
 
-$(OBJ_SERV)/%.o: $(FILE_SERV)/%.c
+$(OBJ_DIR_SERV)/%.o: $(SRC_DIR)/server/%.c
 	@$(CC) $(CPPFLAG) $(CFLAG) -c $< -o $@
 
-	$(OBJ_CLIENT)/%.o: $(FILE_CLIENT)/%.c
+$(OBJ_DIR_CLIENT)/%.o: $(SRC_DIR)/client/%.c
 	@$(CC) $(CPPFLAG) $(CFLAG) -c $< -o $@
 
 
