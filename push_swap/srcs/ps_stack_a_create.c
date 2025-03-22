@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_stack_a_create.c                                :+:      :+:    :+:   */
+/*   ps_stack_a_create.c                                 :+:    :+:           */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 18:01:03 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/11 08:06:03 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/19 15:01:38 by srenaud        ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static t_stack	*ps_stack_a_new(int position);
-static int	ps_get_position(int	*arg_desorer, int index, int len);
-//static int		number_chr(int *arg_disorder, int number);
+static int		ps_get_position(int *arg_desorer, int index, int len);
 static void		ps_stack_a_addback(t_stack **stack_a, t_stack *new);
 
 void	ps_stack_a_create(t_args *args)
@@ -56,7 +55,7 @@ t_stack	*ps_stack_a_new(int position)
 static int	ps_get_position(int	*arg_desorer, int index, int len)
 {
 	int	i;
-	int position;
+	int	position;
 
 	i = 0;
 	position = 0;
@@ -66,19 +65,9 @@ static int	ps_get_position(int	*arg_desorer, int index, int len)
 			position++;
 		i++;
 	}
-	return(position);
+	return (position);
 }
-/*
-static int	number_chr(int *arg_disorder, int number)
-{
-	int	i;
 
-	i = 0;
-	while (arg_disorder[i] != number)
-		i++;
-	return (i);
-}
-*/
 void	ps_stack_a_addback(t_stack **stack_a, t_stack *new)
 {
 	t_stack	*tmp;
