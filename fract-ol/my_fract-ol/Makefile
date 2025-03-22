@@ -20,6 +20,7 @@ SRCS		+= srcs/fractal_render.c
 SRCS		+= srcs/mandlebrot.c
 SRCS		+= srcs/julia.c
 SRCS		+= srcs/fractol_color_gradient.c
+SRCS		+= srcs/fractol_mandelbrot_iter_smooth.c
 SRCS		+= srcs/sierpinski.c
 SRCS		+= srcs/my_mlx_pixel_put.c
 SRCS		+= srcs/fractol_zoom.c
@@ -33,7 +34,7 @@ srcs/libmlx/libmlx.a:
 	$(MAKE) -C srcs/libmlx
 
 $(NAME): $(OBJS) srcs/libft/libft.a srcs/libmlx/libmlx.a
-	$(CC) $(CFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME) -L srcs/libft -lft -L srcs/libmlx -lmlx -lXext -lX11
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME) -L srcs/libft -lft -L srcs/libmlx -lmlx -lXext -lX11 -lm
 
 .PHONY: all
 all: $(NAME)

@@ -40,7 +40,7 @@ void	set_gradient(t_m_struct *data)
 
 	f = &(data->f);
 	color = &(data->colors);
-	i = f->smooth_iter;
+	i = f->smo+oth_iter;
 	if (f->magnitude < 4)
 	{
 		data->final_color = color->a.value;

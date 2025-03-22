@@ -32,6 +32,6 @@ int	mandlebrot(double a, double b)
 	}
 	if (iter == MAX_ITER)
 			return 0x00000000; // Black
-
-    return (fractol_color_gradient(iter)); // White
+	//return (fractol_color_gradient(fractol_mandelbrot_iter_smooth(iter))); // White
+	return (fractol_color_gradient(iter)); // White
 }

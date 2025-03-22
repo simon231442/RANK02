@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <mlx.h>
 # include <X11/X.h>
+# include <math.h>
 
 # define WIN_X 800
 # define GOLDEN_RATIO 1.61803398875
@@ -29,7 +30,7 @@
 # define ZOOM 4
 # define MANDLEBROT 0
 
-# define MAX_ITER 200
+# define MAX_ITER 500
 
 # define ESC_KEY 0xFF1B
 
@@ -78,6 +79,7 @@ int		fractal_render(t_env *env);
 int		mandlebrot(double x, double y);
 int		julia(double x, double y, t_env *env);
 int		fractol_color_gradient(int iter);
+double	fractol_mandelbrot_iter_smooth(double iter);
 int 	sierpinski(int x, int y);
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
 int		fractol_zoom(int wheel, int x, int y, t_env *env);
