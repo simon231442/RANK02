@@ -68,6 +68,11 @@ typedef struct s_env
 	t_nbc	nbc;
 }	t_env;
 
+typedef struct s_offset
+{
+	int		neighbours[9];
+}	t_offset;
+
 
 void	env_init(t_env *env);
 int		event(int hook, void *env);
