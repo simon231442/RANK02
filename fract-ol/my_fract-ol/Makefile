@@ -20,10 +20,15 @@ SRCS		+= srcs/fractal_render.c
 SRCS		+= srcs/mandlebrot.c
 SRCS		+= srcs/julia.c
 SRCS		+= srcs/fractol_color_gradient.c
+SRCS		+= srcs/fractol_anti_aliasing_neighbors_init.c
+SRCS		+= srcs/fractol_anti_aliasing.c
 SRCS		+= srcs/fractol_mandelbrot_iter_smooth.c
 SRCS		+= srcs/sierpinski.c
 SRCS		+= srcs/my_mlx_pixel_put.c
 SRCS		+= srcs/fractol_zoom.c
+
+#test
+SRCS		+= srcs/test_render.c
 
 OBJS        = $(SRCS:.c=.o)
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                           *                */
 /*                                                          * *               */
-/*   ../includes/fractol.h                                 *   *              */
+/*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                        * * * *             */
 /*   By: srenaud <srenaud@student.42lausanne.ch>         *       *            */
 /*                                                      * *     * *           */
 /*   Created: 2025/02/13 14:29:55 by srenaud           *   *   *   *          */
-/*   Updated: 2025/02/13 14:29:55 by srenaud          * * * * * * * *         */
+/*   Updated: 2025/03/24 13:35:10 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <X11/X.h>
 # include <math.h>
 
-# define WIN_X 800
+# define WIN_X 1500 
 # define GOLDEN_RATIO 1.61803398875
 # define WIN_Y (WIN_X / GOLDEN_RATIO)
 # define MIN_RE -2
@@ -61,18 +61,20 @@ typedef struct s_nbc
 	double 	julia_im;
 }	t_nbc;
 
+typedef struct s_neighbors
+{
+	int			offsets[9];
+	int			weights[9];
+	int			total_weight;
+}	t_neighbors;
+
 typedef struct s_env
 {
 	t_vars	mlx;
 	t_data	img;
 	t_nbc	nbc;
+	t_neighbors	neighbors;
 }	t_env;
-
-typedef struct s_offset
-{
-	int		neighbours[9];
-}	t_offset;
-
 
 void	env_init(t_env *env);
 int		event(int hook, void *env);
@@ -84,8 +86,13 @@ int		fractal_render(t_env *env);
 int		mandlebrot(double x, double y);
 int		julia(double x, double y, t_env *env);
 int		fractol_color_gradient(int iter);
+void	fractol_anti_aliasing_neighbors_init(t_data *data, t_neighbors *nb);
+int		fractol_anti_aliasing(t_data *img, t_neighbors *neighbors);
 double	fractol_mandelbrot_iter_smooth(double iter);
 int 	sierpinski(int x, int y);
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
 int		fractol_zoom(int wheel, int x, int y, t_env *env);
+
+//test
+int    test_render(t_env *env);
 #endif

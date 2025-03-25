@@ -38,5 +38,6 @@ int	fractal_render(t_env *env)
 		}
 		y--;
 	}
+	fractol_anti_aliasing(&env->img, &env->neighbors);
 	return(mlx_put_image_to_window(env->mlx.mlx, env->mlx.win, env->img.img, 0, 0));
 }

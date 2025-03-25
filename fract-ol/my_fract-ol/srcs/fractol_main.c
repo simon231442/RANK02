@@ -24,7 +24,9 @@ int main(int ac, char **av)
 	env.img.addr = mlx_get_data_addr(env.img.img, &env.img.bits_per_pixel,
 		&env.img.line_length, &env.img.endian); //renvoie un point sur char *(ptr sur premier pixel), par = ptr sur image, nb bit/pixel, taille d'une ligne, emdian info)
 	ft_printf("Endianness: %d (0 = little endian, 1 = big endian)\n", env.img.endian);
+	fractol_anti_aliasing_neighbors_init(&env.img ,&env.neighbors);
 	fractal_render(&env);
+	//test_render(&env); // test
 	mlx_key_hook(env.mlx.win, event, &env);
 	mlx_mouse_hook(env.mlx.win, fractol_zoom, &env);
 	mlx_hook(env.mlx.win, DestroyNotify, 0, close_window, &env);
