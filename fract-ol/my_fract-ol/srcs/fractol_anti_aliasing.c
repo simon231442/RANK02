@@ -29,9 +29,11 @@ int	fractol_anti_aliasing(t_data *img, t_neighbors *neighbors)
 {
 	int 			*src;
 	char			*dst;
+	int				*dst_pixel;
 	int				x;
 	int				y;
 	int				i;
+	int				base_index;
 	int				pixel;
 	unsigned int	r;
 	unsigned int	g;
@@ -52,15 +54,18 @@ int	fractol_anti_aliasing(t_data *img, t_neighbors *neighbors)
 			g = 0;
 			b = 0;
 			i = 0;
+			base_index = y * WIN_X + x;
 			while (i < 9)
 			{
-				pixel = src[y * img->line_length + x *(img->bits_per_pixel / 8) + neighbors->offsets[i]];
+				pixel = src[base_index + neighbors->offsets[i]];
 				r += ((pixel >> 16) & 0xFF) * neighbors->weights[i];
 				g += ((pixel >> 8) & 0xFF) * neighbors->weights[i];
 				b += (pixel & 0xFF) * neighbors->weights[i];
 				i++;
 			}
-			dst[y * img->line_length + x *(img->bits_per_pixel / 8)] = 0xFF000000 | ((r / neighbors->total_weight) << 16) |
+			dst_pixel = (int *)(dst + y * img->line_length + x * img->bits_per_pixel / 8);
+
+			*dst_pixel = 0xFF000000 | ((r / neighbors->total_weight) << 16) |
 				((g / neighbors->total_weight) << 8) |
 				(b / neighbors->total_weight);
 			x++;

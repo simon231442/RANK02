@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>         *       *            */
 /*                                                      * *     * *           */
 /*   Created: 2025/02/13 14:29:55 by srenaud           *   *   *   *          */
-/*   Updated: 2025/03/24 13:35:10 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/03/26 14:58:53 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,17 @@
 # include <X11/X.h>
 # include <math.h>
 
-# define WIN_X 1500 
+# define WIN_X 1200 
 # define GOLDEN_RATIO 1.61803398875
 # define WIN_Y (WIN_X / GOLDEN_RATIO)
 # define MIN_RE -2
 # define MAX_RE -MIN_RE / GOLDEN_RATIO
 # define MIN_IM MIN_RE / 2
 # define MAX_IM -MIN_RE / 2
-# define ZOOM 4
+# define ZOOM 3.5
 # define MANDLEBROT 0
 
-# define MAX_ITER 500
+# define MAX_ITER 400
 
 # define ESC_KEY 0xFF1B
 
@@ -45,7 +45,7 @@ typedef struct s_data
 	void	*img;
 	char	*addr;
 	int		bits_per_pixel;
-	int		line_length;
+	int		line_length; //nb d'octet par ligne
 	int		endian;
 }	t_data;
 
@@ -82,6 +82,7 @@ void	fractol_quit(t_env *env);
 int 	close_window(void *param);
 
 void	fractol_parse(t_env *env, int ac, char **av);
+float	ft_atof(const char *str);
 int		fractal_render(t_env *env);
 int		mandlebrot(double x, double y);
 int		julia(double x, double y, t_env *env);

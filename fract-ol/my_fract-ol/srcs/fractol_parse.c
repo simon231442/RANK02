@@ -26,7 +26,14 @@ void	fractol_parse(t_env *env, int ac, char **av)
 		env->nbc.mandoujulia = 1;
 	if (ac == 4)
 	{
-		env->nbc.julia_re = ft_atoi(av[2]);
-		env->nbc.julia_im = ft_atoi(av[3]);
+		env->nbc.julia_re = ft_atof(av[2]);
+		env->nbc.julia_im = ft_atof(av[3]);
+	}
+	if (env->nbc.mandoujulia == 1)
+	{
+		env->nbc.min_re = -2;
+		env->nbc.max_re = 2;
+		env->nbc.min_im = -1.2;
+		env->nbc.max_im = 1.2;
 	}
 }

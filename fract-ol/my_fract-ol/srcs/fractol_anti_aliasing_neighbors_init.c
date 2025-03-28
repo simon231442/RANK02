@@ -27,26 +27,40 @@
 
 void	fractol_anti_aliasing_neighbors_init(t_data *data, t_neighbors *nb)
 {
-	int			x;	
-	int			y;
+	int			dx;	
+	int			dy;
 	int			i;
 	static int	weights[9] = {1, 2, 1,
 		2, 4, 2,
 		1, 2, 1};
 
-	y = -1;
+	nb->total_weight = 0;
+	dy = -1;
 	i = 0;
-	while (y <= 1)
+	while (dy <= 1)
 	{
-		x = -1;
-		while (x <= 1)
+		dx = -1;
+		while (dx <= 1)
 		{
-			nb->offsets[i] = y * data->line_length + x * (data->bits_per_pixel / 8);
+			nb->offsets[i] = dy * data->line_length / (data->bits_per_pixel/8) + dx;
 			nb->weights[i] = weights[i];
 			nb->total_weight += weights[i];
-			x++;
+			dx++;
 			i++;
 		}
-		y++;
+		dy++;
 	}
+	i = 0;
+	while (i < 9)
+	{
+		ft_printf("offsets[%d] = %d\n", i, nb->offsets[i]);
+		i++;
+	}
+	i = 0;
+	while (i < 9)
+	{
+		ft_printf("weights[%d] = %d\n", i, nb->weights[i]);
+		i++;
+	}
+	ft_printf("Total weight: %d\n", nb->total_weight);
 }

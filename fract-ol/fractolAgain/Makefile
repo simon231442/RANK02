@@ -11,18 +11,18 @@ CPPFLAGS    += -I srcs/libft
 CPPFLAGS    += -I srcs/libmlx
 CPPFLAGS    += -I includes
 
-SRCS        += srcs/fractol_main.c
-SRCS		+= srcs/env_init.c
-SRCS		+= srcs/fractol_parse.c
-SRCS		+= srcs/event.c
-SRCS		+= srcs/fractol_quit.c
-SRCS		+= srcs/fractal_render.c
-SRCS		+= srcs/mandlebrot.c
-SRCS		+= srcs/julia.c
-SRCS		+= srcs/fractol_color_gradient.c
-SRCS		+= srcs/sierpinski.c
-SRCS		+= srcs/my_mlx_pixel_put.c
-SRCS		+= srcs/fractol_zoom.c
+SRCS        += srcs/frct_main.c
+#SRCS		+= srcs/env_init.c
+#SRCS		+= srcs/fractol_parse.c
+#SRCS		+= srcs/event.c
+#SRCS		+= srcs/fractol_quit.c
+#SRCS		+= srcs/fractal_render.c
+#SRCS		+= srcs/mandlebrot.c
+#SRCS		+= srcs/julia.c
+#SRCS		+= srcs/fractol_color_gradient.c
+#SRCS		+= srcs/sierpinski.c
+#SRCS		+= srcs/my_mlx_pixel_put.c
+#SRCS		+= srcs/fractol_zoom.c
 
 OBJS        = $(SRCS:.c=.o)
 

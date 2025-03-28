@@ -14,6 +14,7 @@ CPPFLAGS    += -I includes
 SRCS        += srcs/fractol_main.c
 SRCS		+= srcs/env_init.c
 SRCS		+= srcs/fractol_parse.c
+SRCS		+= srcs/ft_atof.c
 SRCS		+= srcs/event.c
 SRCS		+= srcs/fractol_quit.c
 SRCS		+= srcs/fractal_render.c

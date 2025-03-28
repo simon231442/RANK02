@@ -37,7 +37,7 @@ PATTERN_OBJ_CLIENT = $(SRC_CLIENT:$(SRC_DIR)/client%.c=$(OBJ_DIR_CLIENT)/%.o)
 #                             COMPILER OPTIONS                                 #
 ################################################################################
 CC = cc
-CPPFLAG = -I$(INC_DIR)
+CPPFLAG = -I$(INC_DIR) -I$(LIBFT_DIR)
 CFLAG = -Wall -Wextra -Werror -g
 LIB = -L$(LIBFT_DIR) -lft
 
@@ -65,6 +65,13 @@ $(NAME_CLIENT): $(LIBFT) $(PATTERN_OBJ_CLIENT)
 	@$(CC) $(PATTERN_OBJ_CLIENT) $(LIB) -o $(NAME_CLIENT)
 	@echo "client binary created : run with ./bin/client"
 
+clean: 
+	@rm -rf $(OBJ_DIR)
+	@echo "object files removed"
+
+fclean: clean 
+	@rm -rf $(BIN_DIR)
+	@echo "binaries removed"
 ################################################################################
 #                               OBJS & RULES                                   #
 ################################################################################
