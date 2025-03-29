@@ -12,55 +12,60 @@
 
 #include "minitalk.h"
 
-t_client	client;
+t_client	g_client;
 
-int	char_send()
+int	char_send(void)
 {
 	int	bits;
 	int	success;
 
 	bits = 0;
-	success = 1;
 	while (bits < 8)
 	{
-		if (client.msg[client.i] & 1 << bits)
-			success = kill(client.pid, SIGUSR1);
+		if (g_client.msg[g_client.i] & 1 << bits)
+			success = kill(g_client.pid, SIGUSR1);
 		else
-			success = kill(client.pid, SIGUSR2);
-		if (!success)
-			return (1);
+			success = kill(g_client.pid, SIGUSR2);
+		if (success == -1)
+		{
+            // Add perror to see what the specific error is
+            perror("kill");								//debug
+            return (1);
+        }
 		usleep(TIME_PER_BIT);
 		bits++;
 	}
 	return (0);
 }
 
-int	msg_send()
+int	msg_send(void)
 {
-	client.i = 0;
-	while (client.msg[client.i])
+	g_client.i = 0;
+	while (g_client.msg[g_client.i])
 	{
-		if (!char_send())
+		if (char_send())
 			return (1);
-		client.i++;
+		g_client.i++;
 	}
-	if (!char_send())
+	if (char_send())
 		return (1);
 	return (0);
 }
 
 int	main(int ac, char **av)
-{	
+{
 	if (ac != 3)
-		return (ft_printf("usage : ./client <PID> <message>\n"));
-	if (ac == 3)
-	{
-		client.pid = ft_atoi(av[1]);
-		client.msg = av[2];
-		if (client.pid <= 0)
-			return (ft_printf("PID can't be negative\n"));
-		if (!msg_send())
-			return (ft_printf("operation failed"));
-	}
+		return (ft_printf("usage : ./g_client <PID> <message>\n"));
+	g_client.pid = ft_atoi(av[1]);
+	g_client.msg = av[2];
+	if (g_client.pid <= 0 || g_client.pid > 32768)
+		return (ft_printf("Invalid PID (valid range: [%d - %d])\n", 1, 32768));
+	if (kill(g_client.pid, 0) == -1) 			//debug
+		{											//debug
+			perror("Server process not found");		//debug
+			return (1);								//debug
+		}
+	if (msg_send())
+		return (ft_printf("operation failed"));
 	return (0);
 }
