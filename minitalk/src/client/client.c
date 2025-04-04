@@ -28,10 +28,9 @@ int	char_send(void)
 			success = kill(g_client.pid, SIGUSR2);
 		if (success == -1)
 		{
-            // Add perror to see what the specific error is
-            perror("kill");								//debug
-            return (1);
-        }
+			ft_printf("operation failed\n");
+			return (1);
+		}
 		usleep(TIME_PER_BIT);
 		bits++;
 	}
@@ -55,16 +54,11 @@ int	msg_send(void)
 int	main(int ac, char **av)
 {
 	if (ac != 3)
-		return (ft_printf("usage : ./g_client <PID> <message>\n"));
+		return (ft_printf("usage : ./client <PID> <message>\n"));
 	g_client.pid = ft_atoi(av[1]);
 	g_client.msg = av[2];
 	if (g_client.pid <= 0 || g_client.pid > 32768)
 		return (ft_printf("Invalid PID (valid range: [%d - %d])\n", 1, 32768));
-	if (kill(g_client.pid, 0) == -1) 			//debug
-		{											//debug
-			perror("Server process not found");		//debug
-			return (1);								//debug
-		}
 	if (msg_send())
 		return (ft_printf("operation failed"));
 	return (0);

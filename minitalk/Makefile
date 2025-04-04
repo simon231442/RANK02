@@ -66,12 +66,17 @@ $(NAME_CLIENT): $(LIBFT) $(PATTERN_OBJ_CLIENT)
 	@echo "client binary created : run with ./bin/client"
 
 clean: 
+	@$(MAKE) --no-print-directory -C $(LIBFT_DIR) fclean
+	@echo "libft cleaned"
 	@rm -rf $(OBJ_DIR)
 	@echo "object files removed"
 
 fclean: clean 
 	@rm -rf $(BIN_DIR)
 	@echo "binaries removed"
+
+re: fclean all
+
 ################################################################################
 #                               OBJS & RULES                                   #
 ################################################################################

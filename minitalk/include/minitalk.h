@@ -19,16 +19,16 @@
 # include <unistd.h>
 # include <stdio.h>
 
-# define BUFF_SIZE 500
+# define BUFF_SIZE 3
 # define TIME_PER_BIT 500
 
 typedef struct	s_server
 {
 	unsigned char	c;
 	int				bits;
-	int				tmp_level;
+	int				buff_free_space;
+	int				buff_total_size;
 	char			*buff;
-	char			*tmp;
 
 }	t_server;
 
