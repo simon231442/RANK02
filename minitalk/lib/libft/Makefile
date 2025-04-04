@@ -40,9 +40,9 @@ SRCS =\
 	ft_strrchr.c \
 	ft_strncmp.c \
 	ft_strlcpy.c \
-	ft_strcat.c \
 	ft_strlcat.c \
 	ft_strnstr.c \
+	ft_str_expand.c \
 	ft_memset.c \
 	ft_bzero.c \
 	ft_memcpy.c \
@@ -105,10 +105,10 @@ all: $(NAME)
 
 # Règles supplémentaires
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	@rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 

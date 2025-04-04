@@ -17,20 +17,20 @@
 # include <signal.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
-# define BUFF_SIZE 500
+# define BUFF_SIZE 3
 # define TIME_PER_BIT 500
 
-typedef struct	s_message
+typedef struct	s_server
 {
 	unsigned char	c;
 	int				bits;
-	int				cliend_pid;
-	int				tmp_level;
+	int				buff_free_space;
+	int				buff_total_size;
 	char			*buff;
-	char			*tmp;
 
-}	t_message;
+}	t_server;
 
 typedef struct	s_client
 {
