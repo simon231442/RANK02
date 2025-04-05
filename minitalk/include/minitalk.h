@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 11:47:04 by srenaud           #+#    #+#             */
-/*   Updated: 2025/03/28 15:16:28 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/04/05 11:36:21 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # define BUFF_SIZE 3
 # define TIME_PER_BIT 500
 
-typedef struct	s_server
+typedef struct s_server
 {
 	unsigned char	c;
 	int				bits;
@@ -32,7 +32,7 @@ typedef struct	s_server
 
 }	t_server;
 
-typedef struct	s_client
+typedef struct s_client
 {
 	int		pid;
 	char	*msg;

@@ -54,7 +54,7 @@ init:
 	@echo "project structure initialized"
 
 $(LIBFT):
-	@$(MAKE) --no-print-directory -C $(LIBFT_DIR)
+	@$(MAKE) -s --no-print-directory -C $(LIBFT_DIR)
 	@echo "libft ready"
 
 $(NAME_SERV): $(LIBFT) $(PATTERN_OBJ_SERV)
