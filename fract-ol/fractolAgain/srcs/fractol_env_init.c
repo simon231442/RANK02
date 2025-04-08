@@ -31,15 +31,7 @@ void	fractol_env_init(t_env *env)
 	env->win = NULL;
 	env->img.img = NULL;
 	env->img.addr = NULL;
-	env->img.bits_per_pixel = 0;
-	env->img.line_length = 0;
-	env->img.endian = 0;
-	env->img.center_re = 0;
-	env->img.center_im = 0;
-	env->img.scale = 0.004;
-	env->img.last_mouse_x = 0;
-	env->img.last_mouse_y = 0;
-	env->img.needs_redraw = 0;
+	env->img.bits_per_pixel = 0;uedraw = 0;
 	env->fractal_type = 0;
 	env->julia_params[0] = J_RE;
 	env->julia_params[1] = J_IM;
