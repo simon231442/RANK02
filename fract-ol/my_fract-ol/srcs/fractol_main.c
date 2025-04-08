@@ -22,7 +22,8 @@ int main(int ac, char **av)
 	env.mlx.win = mlx_new_window(env.mlx.mlx, WIN_X, WIN_Y, "fract-ol");
 	env.img.img = mlx_new_image(env.mlx.mlx, WIN_X, WIN_Y); //renvoie un ptr sur image
 	env.img.addr = mlx_get_data_addr(env.img.img, &env.img.bits_per_pixel,
-		&env.img.line_length, &env.img.endian); //renvoie un point sur char *(ptr sur premier pixel), par = ptr sur image, nb bit/pixel, taille d'une ligne, emdian info)
+		&env.img.line_length, &env.img.endian); 
+		//renvoie un point sur char *(ptr sur premier pixel), par = ptr sur image, nb bit/pixel, taille d'une ligne, emdian info)
 	ft_printf("Bits per pixel: %d\n", env.img.bits_per_pixel);
 	ft_printf("Line length: %d\n", env.img.line_length);
 	ft_printf("Endianness: %d (0 = little endian, 1 = big endian)\n", env.img.endian);

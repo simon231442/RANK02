@@ -6,7 +6,7 @@
 /*   By: srenaud <srenaud@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 18:30:06 by srenaud           #+#    #+#             */
-/*   Updated: 2025/04/05 11:46:59 by srenaud          ###   ########.fr       */
+/*   Updated: 2025/04/05 16:38:43 by srenaud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	main(int ac, char **av)
 	g_client.pid = ft_atoi(av[1]);
 	g_client.msg = av[2];
 	if (g_client.pid <= 0 || g_client.pid > 100000000)
-		return (ft_printf("Invalid PID (valid range: [1 - ]100000000)\n"));
+		return (ft_printf("Invalid PID (valid range: [1 - 100000000])\n"));
 	if (msg_send())
 		return (ft_printf("operation failed"));
 	return (0);
