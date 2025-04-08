@@ -40,7 +40,7 @@ void	fractol_env_init(t_env *env)
 	env->img.last_mouse_x = 0;
 	env->img.last_mouse_y = 0;
 	env->img.needs_redraw = 0;
-	env->fracal_type = 0;
+	env->fractal_type = 0;
 	env->julia_params[0] = J_RE;
 	env->julia_params[1] = J_IM;
 	env->max_iter = MAX_ITER;

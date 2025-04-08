@@ -79,7 +79,7 @@ typedef struct s_env
 	void			*win;
 	t_data			img;
 	t_view			view;
-	int				fracal_type;
+	int				fractal_type;
 	double			julia_params[2];
 	int				max_iter;
 	int				color_sheme;
