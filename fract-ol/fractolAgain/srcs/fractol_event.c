@@ -14,27 +14,21 @@
 /*      .      *             .            .           * * * * * * * *      .  */
 /*                    *            .    .            *               *   .    */
 /*                                                  * *             * *       */
-/*   fractol_mlx_exit.c                            *   *           *   *      */
+/*   fractol_event.c                               *   *           *   *      */
 /*                                                * * * *         * * * *     */
 /*   By: srenaud <srenaud@student.42lausanne.ch> *       *       *       *    */
 /*                                              * *     * *     * *     * *   */
-/*   Created: 2025/04/08 12:33:13 by srenaud   *   *   *   *   *   *   *   *  */
-/*   Updated: 2025/04/08 12:33:13 by srenaud  * * * * * * * * * * * * * * * * */
+/*   Created: 2025/04/09 13:20:25 by srenaud   *   *   *   *   *   *   *   *  */
+/*   Updated: 2025/04/09 13:20:25 by srenaud  * * * * * * * * * * * * * * * * */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	fractol_mlx_exit(t_env *env)
+void	fractol_event(t_env *env)
 {
-	if (env->img.img)
-		mlx_destroy_image(env->mlx, env->img.img);
-	if (env->win)
-		mlx_destroy_window(env->mlx, env->win);
-	if (env->mlx)
-	{
-		mlx_destroy_display(env->mlx);
-		free(env->mlx);
-	}
-	exit(0);
+	mlx_key_hook (env->win, fractol_event_keyhook, env);
+	mlx_mouse_hook(env->win, fractol_event_zoom, env);
+	mlx_hook(env->win, LITTLECROSS, 0, fractol_mlx_exit, env);
+	//mlx_loop_hook(env->win, fractol_render_loop, env);
 }

@@ -29,8 +29,12 @@ int	main(int ac, char **av)
 {
 	t_env			env;
 
-	fractol_env_intit(&env);
+	fractol_env_init(&env);
 	fractol_parsing(&env, ac, av);
 	if (fractol_mlx_start(&env))
-		fractol_exit(&env);
+		fractol_mlx_exit(&env);
+	fractol_render(&env);
+	fractol_event(&env);
+	mlx_loop(env.mlx);
+	return (0);
 }

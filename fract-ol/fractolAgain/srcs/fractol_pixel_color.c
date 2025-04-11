@@ -14,27 +14,34 @@
 /*      .      *             .            .           * * * * * * * *      .  */
 /*                    *            .    .            *               *   .    */
 /*                                                  * *             * *       */
-/*   fractol_mlx_exit.c                            *   *           *   *      */
+/*   fractol_pixel_color.c                         *   *           *   *      */
 /*                                                * * * *         * * * *     */
 /*   By: srenaud <srenaud@student.42lausanne.ch> *       *       *       *    */
 /*                                              * *     * *     * *     * *   */
-/*   Created: 2025/04/08 12:33:13 by srenaud   *   *   *   *   *   *   *   *  */
-/*   Updated: 2025/04/08 12:33:13 by srenaud  * * * * * * * * * * * * * * * * */
+/*   Created: 2025/04/10 00:19:19 by srenaud   *   *   *   *   *   *   *   *  */
+/*   Updated: 2025/04/10 00:19:19 by srenaud  * * * * * * * * * * * * * * * * */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	fractol_mlx_exit(t_env *env)
+/*
+** Tableau de pointeurs de fonctions pour tous les schémas de couleur disponibles
+** Chaque index (COLOR_GRADIENT, COLOR_RAINBOW, etc.) correspond à une fonction
+*/
+
+int	fractol_pixel_color(t_env *env)
 {
-	if (env->img.img)
-		mlx_destroy_image(env->mlx, env->img.img);
-	if (env->win)
-		mlx_destroy_window(env->mlx, env->win);
-	if (env->mlx)
-	{
-		mlx_destroy_display(env->mlx);
-		free(env->mlx);
-	}
-	exit(0);
+	static int	(*g_color_functions[])(int, int) = {
+		fractol_math_color_bands,
+		fractol_math_color_fire,
+		fractol_math_color_gradient,
+		fractol_math_color_ocean,
+		fractol_math_color_psychedelic_1,
+		fractol_math_color_psychedelic_2,
+		fractol_math_color_rainbow,
+	};
+
+	return (g_color_functions[env->color_sheme](env->cache.iterations,
+		env->max_iter));
 }

@@ -14,27 +14,27 @@
 /*      .      *             .            .           * * * * * * * *      .  */
 /*                    *            .    .            *               *   .    */
 /*                                                  * *             * *       */
-/*   fractol_mlx_exit.c                            *   *           *   *      */
+/*   fractol_math_color_gradient.c                 *   *           *   *      */
 /*                                                * * * *         * * * *     */
 /*   By: srenaud <srenaud@student.42lausanne.ch> *       *       *       *    */
 /*                                              * *     * *     * *     * *   */
-/*   Created: 2025/04/08 12:33:13 by srenaud   *   *   *   *   *   *   *   *  */
-/*   Updated: 2025/04/08 12:33:13 by srenaud  * * * * * * * * * * * * * * * * */
+/*   Created: 2025/04/09 20:30:01 by srenaud   *   *   *   *   *   *   *   *  */
+/*   Updated: 2025/04/09 20:30:01 by srenaud  * * * * * * * * * * * * * * * * */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	fractol_mlx_exit(t_env *env)
+int	fractol_math_color_gradient(int iter, int max_iter)
 {
-	if (env->img.img)
-		mlx_destroy_image(env->mlx, env->img.img);
-	if (env->win)
-		mlx_destroy_window(env->mlx, env->win);
-	if (env->mlx)
-	{
-		mlx_destroy_display(env->mlx);
-		free(env->mlx);
-	}
-	exit(0);
+	int		red;
+	int		green;
+	int		blue;
+	double	t;
+
+	t = (double)iter / max_iter;
+	red = (int)(9 * (1 - t) * t * t * t * 255);
+	green = (int)(15 * (1 - t) * (1 - t) * t * t * 255);
+	blue = (int)(8.5 * (1 - t) * (1 - t) * (1 - t) * t * 255);
+	return (red << 16 | green << 8 | blue);
 }

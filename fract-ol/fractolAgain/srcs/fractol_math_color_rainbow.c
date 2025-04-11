@@ -14,27 +14,29 @@
 /*      .      *             .            .           * * * * * * * *      .  */
 /*                    *            .    .            *               *   .    */
 /*                                                  * *             * *       */
-/*   fractol_mlx_exit.c                            *   *           *   *      */
+/*   fractol_math_color_rainbow.c                  *   *           *   *      */
 /*                                                * * * *         * * * *     */
 /*   By: srenaud <srenaud@student.42lausanne.ch> *       *       *       *    */
 /*                                              * *     * *     * *     * *   */
-/*   Created: 2025/04/08 12:33:13 by srenaud   *   *   *   *   *   *   *   *  */
-/*   Updated: 2025/04/08 12:33:13 by srenaud  * * * * * * * * * * * * * * * * */
+/*   Created: 2025/04/09 20:30:47 by srenaud   *   *   *   *   *   *   *   *  */
+/*   Updated: 2025/04/09 20:30:47 by srenaud  * * * * * * * * * * * * * * * * */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	fractol_mlx_exit(t_env *env)
+int	fractol_math_color_rainbow(int iter, int max_iter)
 {
-	if (env->img.img)
-		mlx_destroy_image(env->mlx, env->img.img);
-	if (env->win)
-		mlx_destroy_window(env->mlx, env->win);
-	if (env->mlx)
-	{
-		mlx_destroy_display(env->mlx);
-		free(env->mlx);
-	}
-	exit(0);
+	double	t;
+	int		r;
+	int		g;
+	int		b;
+
+	if (iter == max_iter)
+		return (0x000000);
+	t = (double)iter / 32.0;
+	r = (int)(sin(0.3 * t + 0) * 127 + 128);
+	g = (int)(sin(0.3 * t + 2) * 127 + 128);
+	b = (int)(sin(0.3 * t + 4) * 127 + 128);
+	return (r << 16 | g << 8 | b);
 }

@@ -14,27 +14,29 @@
 /*      .      *             .            .           * * * * * * * *      .  */
 /*                    *            .    .            *               *   .    */
 /*                                                  * *             * *       */
-/*   fractol_mlx_exit.c                            *   *           *   *      */
+/*   fractol_math_color_fire.c                     *   *           *   *      */
 /*                                                * * * *         * * * *     */
 /*   By: srenaud <srenaud@student.42lausanne.ch> *       *       *       *    */
 /*                                              * *     * *     * *     * *   */
-/*   Created: 2025/04/08 12:33:13 by srenaud   *   *   *   *   *   *   *   *  */
-/*   Updated: 2025/04/08 12:33:13 by srenaud  * * * * * * * * * * * * * * * * */
+/*   Created: 2025/04/09 20:31:01 by srenaud   *   *   *   *   *   *   *   *  */
+/*   Updated: 2025/04/09 20:31:01 by srenaud  * * * * * * * * * * * * * * * * */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	fractol_mlx_exit(t_env *env)
+int	fractol_math_color_fire(int iter, int max_iter)
 {
-	if (env->img.img)
-		mlx_destroy_image(env->mlx, env->img.img);
-	if (env->win)
-		mlx_destroy_window(env->mlx, env->win);
-	if (env->mlx)
-	{
-		mlx_destroy_display(env->mlx);
-		free(env->mlx);
-	}
-	exit(0);
+	double	t;
+	int		r;
+	int		g;
+	int		b;
+
+	if (iter == max_iter)
+		return (0x000000);
+	t = (double)iter / max_iter;
+	r = (int)(255 * t);
+	g = (int)(128 * t * t);
+	b = (int)(32 * t * t * t);
+	return (r << 16 | g << 8 | b);
 }

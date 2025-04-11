@@ -28,10 +28,13 @@
 void	fractol_parsing(t_env *env, int ac, char **av)
 {
 	if (ac < 2 || ac > 4)
-		return (ft_putstr_fd("Usage: ./fractol [m/j] [re] [im]\n", 2));
-	else if (av[1] == 'm')
+	{
+		ft_putstr_fd("Usage: ./fractol [m/j] [re] [im]\n", 2);
+		exit(1);
+	}
+	else if (av[1][0] == 'm')
 		env->fractal_type = 0;
-	else if (av[1] == 'j')
+	else if (av[1][0] == 'j')
 	{
 		env->fractal_type = 1;
 		if (ac == 4)

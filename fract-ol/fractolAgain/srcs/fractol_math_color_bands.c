@@ -14,27 +14,27 @@
 /*      .      *             .            .           * * * * * * * *      .  */
 /*                    *            .    .            *               *   .    */
 /*                                                  * *             * *       */
-/*   fractol_mlx_exit.c                            *   *           *   *      */
+/*   fractol_math_color_bands.c                    *   *           *   *      */
 /*                                                * * * *         * * * *     */
 /*   By: srenaud <srenaud@student.42lausanne.ch> *       *       *       *    */
 /*                                              * *     * *     * *     * *   */
-/*   Created: 2025/04/08 12:33:13 by srenaud   *   *   *   *   *   *   *   *  */
-/*   Updated: 2025/04/08 12:33:13 by srenaud  * * * * * * * * * * * * * * * * */
+/*   Created: 2025/04/09 20:31:49 by srenaud   *   *   *   *   *   *   *   *  */
+/*   Updated: 2025/04/09 20:31:49 by srenaud  * * * * * * * * * * * * * * * * */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-int	fractol_mlx_exit(t_env *env)
+int	fractol_math_color_bands(int iter, int max_iter)
 {
-	if (env->img.img)
-		mlx_destroy_image(env->mlx, env->img.img);
-	if (env->win)
-		mlx_destroy_window(env->mlx, env->win);
-	if (env->mlx)
-	{
-		mlx_destroy_display(env->mlx);
-		free(env->mlx);
-	}
-	exit(0);
+	static int	colors[16] = {
+		0x421E0F, 0x19071A, 0x09012F, 0x040449,
+		0x000764, 0x0C2C8A, 0x1852B1, 0x397DD1,
+		0x86B5E5, 0xD3ECF8, 0xF1E9BF, 0xF8C95F,
+		0xFFAA00, 0xCC8000, 0x995700, 0x6A3403
+	};
+
+	if (iter == max_iter)
+		return (0x000000);
+	return (colors[iter % 16]);
 }

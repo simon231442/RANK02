@@ -27,19 +27,11 @@
 
 void	fractol_env_init(t_env *env)
 {
-	env->mlx = NULL;
-	env->win = NULL;
-	env->img.img = NULL;
-	env->img.addr = NULL;
-	env->img.bits_per_pixel = 0;uedraw = 0;
-	env->fractal_type = 0;
+	ft_memset(env, 0, sizeof(t_env));
+	env->view.scale = 0.004;
 	env->julia_params[0] = J_RE;
 	env->julia_params[1] = J_IM;
-	env->max_iter = MAX_ITER;
+	env->max_iter = ITER_MAX;
 	env->color_sheme = 0;
-	env->anti_aliasing = 0;
-	env->cache.calculated = NULL;
-	env->cache.iteratioins = 0;
-	env->cache.smoothed = NULL;
 	env->show_ui = 1;
 }

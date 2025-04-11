@@ -51,6 +51,7 @@ SRCS =\
 	ft_toupper.c \
 	ft_tolower.c \
 	ft_atoi.c \
+	ft_atof.c \
 	ft_calloc.c \
 	ft_strdup.c \
 	ft_substr.c \
@@ -68,49 +69,37 @@ SRCS =\
 	$(SRCS_BONUS)
 
 
-OBJS = $(SRCS:%.c=%.o)
-
-
 #########################################################################
 
 
 
 
-### (COMPILATION) RULES ###
+### COMPILATION RULES ###
 
 .DEFAULT_GOAL=all
 
+# Silent .o compilation rule
+OBJS = $(SRCS:.c=.o)
+%.o: %.c
+	@$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
-# $<: first file on the right side of ':'
-# $@: file on the left side of ':'
-# 
-#
-# Implicit rule for compiling .o from .c: is there by default, unless you remove it:
-#%.o: %.c
-#	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
-
-
-# Règle pour créer la bibliothèque
-
+# Library creation rule
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
+	@echo "libft : $(NAME) created"
 
 ### PHONY RULES ###
-
 
 .PHONY: all clean fclean re bonus
 
 all: $(NAME)
 
-# Règles supplémentaires
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	@rm -f $(OBJS) $(OBJS_BONUS)
+	@echo "libft : objects removed"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "libft : $(NAME) removed"
 
 re: fclean all
-
-bonus: $(OBJS) $(OBJS_BONUS)
-	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
-

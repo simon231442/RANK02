@@ -14,27 +14,60 @@
 /*      .      *             .            .           * * * * * * * *      .  */
 /*                    *            .    .            *               *   .    */
 /*                                                  * *             * *       */
-/*   fractol_mlx_exit.c                            *   *           *   *      */
+/*   ft_atof.c                                     *   *           *   *      */
 /*                                                * * * *         * * * *     */
 /*   By: srenaud <srenaud@student.42lausanne.ch> *       *       *       *    */
 /*                                              * *     * *     * *     * *   */
-/*   Created: 2025/04/08 12:33:13 by srenaud   *   *   *   *   *   *   *   *  */
-/*   Updated: 2025/04/08 12:33:13 by srenaud  * * * * * * * * * * * * * * * * */
+/*   Created: 2025/03/25 13:06:50 by srenaud   *   *   *   *   *   *   *   *  */
+/*   Updated: 2025/03/25 13:06:50 by srenaud  * * * * * * * * * * * * * * * * */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "libft.h"
 
-int	fractol_mlx_exit(t_env *env)
+static float	get_decimal(const char *str);
+
+float	ft_atof(const char *str)
 {
-	if (env->img.img)
-		mlx_destroy_image(env->mlx, env->img.img);
-	if (env->win)
-		mlx_destroy_window(env->mlx, env->win);
-	if (env->mlx)
+	float   nb;
+	int     sign;
+
+	nb = 0;
+	sign = 1;
+	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v'
+		|| *str == '\f' || *str == '\r')
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		mlx_destroy_display(env->mlx);
-		free(env->mlx);
+		if (*str == '-')
+			sign = -1;
+		str++;
 	}
-	exit(0);
+	while (*str >= '0' && *str <= '9')
+	{
+		nb = nb * 10 + (*str - '0');
+		str++;
+	}
+	if (*str == '.')
+	{
+		str++;
+		nb += get_decimal(str);
+	}
+	return (nb * sign);
+}
+
+static float	get_decimal(const char *str)
+{
+	float	nb;
+	float	decimal;
+
+	nb = 0;
+	decimal = 0.1;
+	while (*str >= '0' && *str <= '9')
+	{
+		nb += (*str - '0') * decimal;
+		decimal /= 10;
+		str++;
+	}
+	return (nb);
 }

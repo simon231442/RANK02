@@ -14,27 +14,29 @@
 /*      .      *             .            .           * * * * * * * *      .  */
 /*                    *            .    .            *               *   .    */
 /*                                                  * *             * *       */
-/*   fractol_mlx_exit.c                            *   *           *   *      */
+/*   fractol_event_keyhook.c                       *   *           *   *      */
 /*                                                * * * *         * * * *     */
 /*   By: srenaud <srenaud@student.42lausanne.ch> *       *       *       *    */
 /*                                              * *     * *     * *     * *   */
-/*   Created: 2025/04/08 12:33:13 by srenaud   *   *   *   *   *   *   *   *  */
-/*   Updated: 2025/04/08 12:33:13 by srenaud  * * * * * * * * * * * * * * * * */
+/*   Created: 2025/04/10 01:02:23 by srenaud   *   *   *   *   *   *   *   *  */
+/*   Updated: 2025/04/10 01:02:23 by srenaud  * * * * * * * * * * * * * * * * */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+#include <stdio.h>
 
-int	fractol_mlx_exit(t_env *env)
+int	fractol_event_keyhook(int keycode, t_env *env)
 {
-	if (env->img.img)
-		mlx_destroy_image(env->mlx, env->img.img);
-	if (env->win)
-		mlx_destroy_window(env->mlx, env->win);
-	if (env->mlx)
+	if (keycode >= 49 && keycode <= 55)
 	{
-		mlx_destroy_display(env->mlx);
-		free(env->mlx);
+		env->color_sheme = keycode - 49;
+		env->view.needs_redraw = 1;
 	}
-	exit(0);
+	if (keycode == KEY_ESC)
+	{
+		fractol_mlx_exit(env);
+	}
+	fractol_render(env);
+	return (0);
 }

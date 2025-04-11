@@ -14,27 +14,34 @@
 /*      .      *             .            .           * * * * * * * *      .  */
 /*                    *            .    .            *               *   .    */
 /*                                                  * *             * *       */
-/*   fractol_mlx_exit.c                            *   *           *   *      */
+/*   fractol_render.c                              *   *           *   *      */
 /*                                                * * * *         * * * *     */
 /*   By: srenaud <srenaud@student.42lausanne.ch> *       *       *       *    */
 /*                                              * *     * *     * *     * *   */
-/*   Created: 2025/04/08 12:33:13 by srenaud   *   *   *   *   *   *   *   *  */
-/*   Updated: 2025/04/08 12:33:13 by srenaud  * * * * * * * * * * * * * * * * */
+/*   Created: 2025/04/09 12:32:49 by srenaud   *   *   *   *   *   *   *   *  */
+/*   Updated: 2025/04/09 12:32:49 by srenaud  * * * * * * * * * * * * * * * * */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "fractol.h"
 
-int	fractol_mlx_exit(t_env *env)
+void	fractol_render(t_env *env)
 {
-	if (env->img.img)
-		mlx_destroy_image(env->mlx, env->img.img);
-	if (env->win)
-		mlx_destroy_window(env->mlx, env->win);
-	if (env->mlx)
+	int		x;
+	int		y;
+
+	y = 0;
+	while (y < WIN_Y)
 	{
-		mlx_destroy_display(env->mlx);
-		free(env->mlx);
+		x = 0;
+		while (x < WIN_X)
+		{
+			fractol_pixel_draw(env, x, y);
+			x++;
+		}
+		y++;
 	}
-	exit(0);
+	env->view.needs_redraw = 0;
+	mlx_put_image_to_window(env->mlx, env->win, env->img.img, 0, 0);
 }
