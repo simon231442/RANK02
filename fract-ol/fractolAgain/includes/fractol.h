@@ -33,7 +33,7 @@
 # include <X11/X.h>
 # include <math.h>
 
-# define WIN_X 800
+# define WIN_X 2500
 # define GOLDEN_RATIO 1.61803398875
 # define WIN_Y WIN_X / GOLDEN_RATIO
 # define ZOOM 1.5
