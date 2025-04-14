@@ -35,12 +35,12 @@ static int	ft_strcmp(char *buff, char *s)
 	i = 0;
 	while (buff[i] && s[i])
 	{
-//printf("\nca compar coco\n");
-		if (buff[1] != s[i])
+//printf("\n%dnca compar coco\n",i);
+		if (buff[i] != s[i])
 			return(0);
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
 static void	filter(char *buff, char *s)
@@ -52,9 +52,9 @@ static void	filter(char *buff, char *s)
 	b = 0;
 	while (buff[i])
 	{
-		if (!ft_strcmp(&buff[i], s))
+		if (ft_strcmp(&buff[i], s))
 		{
-printf("\nvalide\n");
+//printf("\nvalide\n");
 			while (b++ < strlen(s))
 			{
 				write(1, "*", 1);
